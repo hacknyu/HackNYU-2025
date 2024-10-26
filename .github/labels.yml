@@ -1,0 +1,21 @@
+preview:
+- changed-files:
+  - any-glob-to-any-file: ['src/*', 'src/assets/**/*']
+tracks:
+- changed-files:
+  - any-glob-to-any-file: 'src/sections/tracks/**/*'
+about:
+- changed-files:
+  - any-glob-to-any-file: 'src/sections/about/**/*'
+hero:
+- changed-files:
+  - any-glob-to-any-file: 'src/sections/hero/**/*'
+faq:
+- changed-files:
+  - any-glob-to-any-file: 'src/sections/faq/**/*'
+footer:
+- changed-files:
+  - any-glob-to-any-file: 'src/components/footer/**/*'
+navbar:
+- changed-files:
+  - any-glob-to-any-file: 'src/components/navbar/**/*'
