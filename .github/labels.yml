@@ -1,6 +1,6 @@
-preview:
-- changed-files:
-  - any-glob-to-any-file: ['src/*', 'src/assets/**/*']
+# preview:
+# - changed-files:
+#   - any-glob-to-any-file: ['src/*', 'src/assets/**/*']
 tracks:
 - changed-files:
   - any-glob-to-any-file: 'src/sections/tracks/**/*'
