@@ -5,8 +5,8 @@
 - TailwindCSS
 
 ## Setup
-npm i
-npm run dev
+- npm i
+- npm run dev
 
 ## How to Contribute
 1. Make a branch
