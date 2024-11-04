@@ -1,0 +1,7 @@
+
+ /* for svgs */
+ .blue-filter {
+    filter: invert(27%) sepia(98%) saturate(1411%) hue-rotate(180deg) brightness(90%) contrast(101%);
+}
+
+  
