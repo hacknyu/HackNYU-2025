@@ -4,6 +4,10 @@
 - React
 - TailwindCSS
 
+## Setup
+npm i
+npm run dev
+
 ## How to Contribute
 1. Make a branch
     - Branch name should describe the task you're doing
