@@ -1,7 +1,57 @@
-
- /* for svgs */
- .blue-filter {
-    filter: invert(27%) sepia(98%) saturate(1411%) hue-rotate(180deg) brightness(90%) contrast(101%);
-}
-
+.footer {
+    background-color: #f5f5f5;
+    border-top: 1px solid #2d72d2;
+    width: 100%;
+    padding: 10px 10px; 
+    margin: auto 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer-content a {
+    color: #2d72d2;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; 
+      text-align: center; 
+    }
+  
+    .footer-content a {
+      font-size: 12px;
+    }
+  
+    .social-icons {
+      justify-content: center;
+      margin-top: 10px; 
+    }
+  }
+  
+  /* Preserving any SVG-specific styles from original HackNYU-2025 project */
+  .blue-filter {
+     filter: invert(27%) sepia(98%) saturate(1411%) hue-rotate(180deg) brightness(90%) contrast(101%);
+  }
   

@@ -1,14 +1,24 @@
-import Footer from './components/footer/Footer'
+import React from 'react';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+import Tracks from './sections/tracks/Tracks';    
+import Hero from './sections/hero/Hero';  
 
 const App = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline font-inter text-blue">
-        Hello world!
-      </h1>
-      <Footer />
-    </>
-  )
+    <div className="app-container">
+      <Navbar />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section className="section-container" id="tracks">
+        <Tracks />
+      </section>
+      <section>
+        <Footer />
+      </section>
+    </div>
+  );
 }
 
-export default App
+export default App;

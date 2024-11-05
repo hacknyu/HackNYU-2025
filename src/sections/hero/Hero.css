@@ -1,0 +1,57 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%; 
+    min-height: 100vh; 
+    padding-left: 40px; 
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.hero h1 {
+    font-size: 4em; 
+    font-weight: bold;
+    color: #1a73e8; 
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25em; 
+    color: #1a73e8; 
+    line-height: 1.6; 
+    margin-bottom: 30px;
+}
+
+.hero .buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.hero .register-button {
+    background-color: #1a73e8; 
+    color: white; 
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero .register-button:hover {
+    background-color: #135ba1; 
+}
+
+.hero .sponsor-link {
+    color: #1a73e8; 
+    font-size: 1em;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hero .sponsor-link:hover {
+    text-decoration: none; 
+}
