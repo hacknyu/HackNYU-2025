@@ -11,7 +11,7 @@ const App = () => {
       <section id="hero">
         <Hero />
       </section>
-      <section className="section-container" id="tracks">
+      <section className="section-container" id="tracks" style={{ marginTop: '200px', marginBottom: '200px' }}>
         <Tracks />
       </section>
       <section>

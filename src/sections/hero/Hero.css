@@ -31,7 +31,7 @@
 }
 
 .hero .register-button {
-    background-color: #1a73e8; 
+    background-color: #ff5527;
     color: white; 
     padding: 12px 24px;
     border: none;
@@ -41,17 +41,54 @@
     transition: background-color 0.3s;
 }
 
-.hero .register-button:hover {
-    background-color: #135ba1; 
-}
-
 .hero .sponsor-link {
     color: #1a73e8; 
     font-size: 1em;
+    font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
 }
 
 .hero .sponsor-link:hover {
     text-decoration: none; 
+}
+
+.text-container {
+    position: absolute;
+    left: 156px; /* Adjusted as per your requirements */
+    top: 300px;
+    width: calc(50% - 156px); /* Dynamically calculate width */
+}
+
+.logo {
+    position: absolute; /* Positions the logo absolutely relative to the nearest positioned ancestor */
+    top: 0; /* Aligns the logo to the top of the hero section */
+    left: 0; /* Aligns the logo to the left side of the screen */
+    z-index: 1000; /* Ensures the logo is above all other content, adjust as necessary */
+    margin-top: 30px; /* Keeps spacing from the top edge consistent */
+    margin-left: 50px; /* Increases left margin to move the logo to the right */
+}
+
+.mlh-logo {
+    position: absolute; /* Positions the logo absolutely relative to the nearest positioned ancestor */
+    top: 0; /* Aligns the logo to the top of the hero section */
+    left: 0; /* Aligns the logo to the left side of the screen */
+    z-index: 1000; /* Ensures the logo is above all other content, adjust as necessary */
+    margin-left: 156px; /* Increases left margin to move the logo to the right */
+}
+
+.hero-right {
+    position: absolute; /* Positions the logo absolutely relative to the nearest positioned ancestor */
+    top: 150px; /* Aligns the logo to the top of the hero section */
+    left: 100px; /* Aligns the logo to the left side of the screen */
+    margin-left: 800px; /* Increases left margin to move the logo to the right */
+}
+
+.hero-section {
+    position: absolute; /* Keeps the section positioned absolutely relative to its nearest positioned ancestor */
+    left: 50%; /* Center horizontally */
+    bottom: 100px; /* Aligns the section to the bottom of the viewport */
+    transform: translateX(-50%); /* Corrects the horizontal positioning to truly center the section */
+    width: 100%; /* Adjust width as necessary, assuming you want some margin from the edges */
+    max-width: 1500px; /* Optional: Max width for larger screens */
 }

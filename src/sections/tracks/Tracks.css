@@ -1,25 +1,35 @@
 .track-container {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 20px 200px;
   padding: 20px;
   text-align: center;
+  background-image: url('../../assets/track.png');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80vw;
+  height: 60vh;
+  min-height: 300px;
+  min-width: 500px;
 }
 
 .track-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  gap: 20px;
-  justify-content: center; 
-  max-width: 800px; 
-  margin: 0 auto; 
+  gap: 20px; 
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .track-card {
+  padding: 30px;
+}
+
+.track-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  text-align: center;
+  align-items: center; 
+  justify-content: flex-start; 
 }
 
 .track-icon {
@@ -32,7 +42,7 @@
   justify-content: center;
   border-radius: 50%;
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-right: 10px; /* Adjusted for space between icon and title */
 }
 
 .track-title {
@@ -44,13 +54,20 @@
 
 .track-description {
   font-size: 0.9em;
-  color: #666;
-  margin-top: 5px;
-  text-align: center;
+  color: #0B5CD5;
+  margin-top: 10px;
+  text-align: left; /* Align text to the left */
+}
+
+.track {
+  text-align: center;  /* Center the text if not already centered */
+  margin-top: -100px;   /* Apply a negative top margin to move it upwards */
 }
 
 h2 {
   color: #0B5CD5;
-  font-size: 2em;
-  margin-bottom: 30px;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 120px;
 }
+
