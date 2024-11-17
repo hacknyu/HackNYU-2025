@@ -1,13 +1,15 @@
 import Footer from './components/footer/Footer'
+import Navbar from './components/navbar/Navbar'
+import { useOpen } from './context/OpenContext';
 
 const App = () => {
+  const { isOpen } = useOpen();
+
   return (
-    <>
-      <h1 className="text-3xl font-bold underline font-inter text-blue">
-        Hello world!
-      </h1>
-      <Footer />
-    </>
+    <div className="h-screen max-w-full">
+      <Navbar />
+      { !isOpen && <Footer /> }
+    </div>
   )
 }
 
