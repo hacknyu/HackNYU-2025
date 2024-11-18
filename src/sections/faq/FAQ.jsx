@@ -1,13 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
 
 const FAQ = () => {
   return (
-    <div>
-      <h1>FAQ</h1>
-      {/* FAQ Content Here */}
-    </div>
-  );
+    <div>FAQ</div>
+  )
 }
 
-export default FAQ;
+export default FAQ
