@@ -2,7 +2,7 @@ import About from "./sections/about/About"
 
 const App = () => {
   return (
-    <div className="font-inter p-3">
+    <div className="font-inter">
       <About />
     </div>
   )
