@@ -1,47 +1,49 @@
 import React from 'react'
+import Card from '../../components/card/Card';
 
 const About = () => {
   const info = [
     {
-      header: "15k+",
-      subheader: "Universities",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis"
+      header: '26+',
+      subheader: 'Universities',
+      description: 'Students from 26+ universities across the country have participated in our events, including University of Toronto, Northeastern University, and Columbia University.'
     },
     {
-      header: "250+",
-      subheader: "Countries",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis"
+      header: '52+',
+      subheader: 'Locations',
+      description: 'Participants from 52+ locations have attended our events, including Jamaica, New Dehli, and Seoul.'
     },
     {
-      header: "86+",
-      subheader: "Students",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis"
+      header: '1000+',
+      subheader: 'Participants',
+      description: 'We have had over 1000 participants attend our events, including but not limited to those who are high school students, undergraduate students, and students from bootcamps.'
     },
     {
-      header: "120+",
-      subheader: "Sponsors",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis"
+      header: '100+',
+      subheader: 'Mentors',
+      description: 'We have had over 100 mentors from companies like Google, Microsoft, and Amazon help our participants.'
     }
-  ];
-
+  ]
   return (
-    <section className="md:flex md:flex-col md:justify-center md:items-center bg-blue md:rounded-t-[100px] p-5 text-white w-full">
+    <section className="md:flex md:flex-col md:justify-center md:items-center bg-blue md:rounded-t-[100px] p-10 text-white overflow-hidden">
       <h2 className="text-[32px] font-bold">About Us</h2>
-      <h3>There are many variations of passages of Lorem Ipsum</h3>
       <br/>
-      <div className="md:flex md:justify-center md:items-center">
-        {info.map((item, index) => {
-          return (
-            <div key={index} className="md:text-center">
-              <h2 className="text-[32px] font-bold">{item.header}</h2>
-              <h3 className="font-semibold">{item.subheader}</h3>
-              <p>{item.description}</p>
-              <br/>
-              {index !== info.length - 1 ? <hr className="bg-blue opacity-[.3] h-[2px] md:hidden"/> : null}
-              <br/>
-            </div>
-          )
-        })}
+      <div className="flex flex-col xl:flex-row md:justify-center md:items-center text-xl font-bold">
+        <div className="md:flex">
+          <Card info={info[0]}/>
+          <br/>
+          <span className="md:w-16 md:h-16"/>
+          <Card info={info[1]}/>
+        </div>
+        <br/>
+        <span className="md:w-16 md:h-16"/>
+        <div className="md:flex">
+          <Card info={info[2]}/>
+          <br/>
+          <span className="md:w-16 md:h-16"/>
+          <Card info={info[3]}/>
+        </div>
+        {/* {index !== info.length - 1 ? <hr className="bg-blue opacity-[.3] h-[2px] md:hidden"/> : null} */}
       </div>
     </section>
   )
