@@ -3,7 +3,7 @@ import ReactCardFlip from 'react-card-flip';
 
 const Card = ({ info }) => {
     const [flipped, setFlipped] = useState(false);
-    const cardStyle = `flex flex-col justify-between text-4xl border-2 border-white h-72 md:w-[300px] md:h-[300px] xl:w-[270px] xl:h-[300px] text-center p-5`;
+    const cardStyle = `flex flex-col justify-between text-4xl text-center border-2 border-white h-72 md:w-[300px] md:h-[300px] xl:w-[270px] xl:h-[300px] p-5 bg-custom-gradient hover:cursor-pointer`;
 
     const handleClick = (e) => {
         e.preventDefault();
@@ -13,15 +13,14 @@ const Card = ({ info }) => {
     return (
         <ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
         <div onClick={handleClick} className={cardStyle}>
-            <div>
+            <div className="m-auto">
                 <h2>{info.header}</h2>
                 <h3>{info.subheader}</h3>
             </div>
-            <button>&rarr;</button>
         </div>
 
         <div onClick={handleClick} className={cardStyle}>
-            <p className="text-xl">{info.description}</p>
+            <p className="text-xl my-auto">{info.description}</p>
         </div>
         </ReactCardFlip>
     )

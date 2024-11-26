@@ -24,6 +24,7 @@ const About = () => {
       description: 'We have had over 100 mentors from companies like Google, Microsoft, and Amazon help our participants.'
     }
   ]
+  
   return (
     <section className="md:flex md:flex-col md:justify-center md:items-center bg-blue md:rounded-t-[100px] p-10 text-white overflow-hidden">
       <h2 className="text-[32px] font-bold">About Us</h2>
