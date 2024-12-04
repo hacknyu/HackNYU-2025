@@ -1,3 +1,4 @@
+import About from './sections/about/About';
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import { useOpen } from './context/OpenContext';
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <div className="h-screen max-w-full">
       <Navbar />
+      <About />
       { !isOpen && <Footer /> }
     </div>
   )
