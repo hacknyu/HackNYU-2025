@@ -17,6 +17,9 @@ export default {
           DEFAULT: '#F95620',
         }
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite', 
+      },
     },
   },
   plugins: [],

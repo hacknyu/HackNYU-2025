@@ -19,3 +19,6 @@ footer:
 navbar:
 - changed-files:
   - any-glob-to-any-file: 'src/components/navbar/**/*'
+team:
+- changed-files:
+  - any-glob-to-any-file: 'src/sections/team/**/*'

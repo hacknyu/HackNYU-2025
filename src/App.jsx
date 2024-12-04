@@ -1,9 +1,14 @@
-import About from "./sections/about/About"
+import Footer from './components/footer/Footer'
+import Navbar from './components/navbar/Navbar'
+import { useOpen } from './context/OpenContext';
 
 const App = () => {
+  const { isOpen } = useOpen();
+
   return (
-    <div className="font-inter w-screen">
-      <About />
+    <div className="h-screen max-w-full">
+      <Navbar />
+      { !isOpen && <Footer /> }
     </div>
   )
 }
