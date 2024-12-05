@@ -29,12 +29,13 @@ const Navbar = () => {
         <img src="/2025/hacklogo.svg" alt="HackNYU logo"></img>
       </div>
       <div className="hidden font-bold md:flex md:space-x-10 md:text-blue md:text-2xl">
-      <Link
+        <Link
           to="about"
           spy={true}
           smooth={true}
           duration={500}
-          className="hover:cursor-pointer"
+          offset={-75}
+          className="hover:cursor-pointer hover:text-dark_blue"
           onClick={handleClick}
         >
           About
@@ -45,7 +46,8 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           duration={500}
-          className="hover:cursor-pointer"
+          offset={-75}
+          className="hover:cursor-pointer hover:text-dark_blue"
           onClick={handleClick}
         >
           Tracks
@@ -56,7 +58,8 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           duration={500}
-          className="hover:cursor-pointer"
+          offset={-75}
+          className="hover:cursor-pointer hover:text-dark_blue"
           onClick={handleClick}
         >
           FAQ
@@ -80,7 +83,8 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className="hover:cursor-pointer"
+              offset={-75}
+              className="hover:cursor-pointer hover:brightness-90"
               onClick={handleClick}
             >
               About
@@ -91,7 +95,8 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className="hover:cursor-pointer"
+              offset={-75}
+              className="hover:cursor-pointer hover:brightness-90"
               onClick={handleClick}
             >
               Tracks
@@ -102,7 +107,8 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className="hover:cursor-pointer"
+              offset={-75}
+              className="hover:cursor-pointer hover:brightness-90"
               onClick={handleClick}
             >
               FAQ
