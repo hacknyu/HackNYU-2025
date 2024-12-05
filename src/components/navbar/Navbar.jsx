@@ -26,7 +26,7 @@ const Navbar = () => {
       }`}
     >
       <div className={`w-[100px] ml-5 ${isOpen ? 'hidden' : 'block'}`}>
-        <img src="/hacklogo.svg" alt="HackNYU logo"></img>
+        <img src="/2025/hacklogo.svg" alt="HackNYU logo"></img>
       </div>
       <div className="hidden font-bold md:flex md:space-x-10 md:text-blue md:text-2xl">
       <Link
@@ -112,7 +112,7 @@ const Navbar = () => {
         } 
       </div>
       <div className="md:w-[100px] md:mr-5">
-        <a className="hidden md:block bg-blue text-white py-3 px-4 md:text-xl border-none rounded cursor-pointer transition-colors duration-300 hover:bg-blue-500"
+        <a className="hidden md:block bg-blue text-white py-3 px-4 md:text-xl border-none rounded cursor-pointer transition-colors duration-300 hover:cursor-pointer hover:bg-dark_blue"
             href="https://forms.gle/eUhikbS4VpcnXTvA9"
             target="_blank"
             rel="noopener noreferrer"
