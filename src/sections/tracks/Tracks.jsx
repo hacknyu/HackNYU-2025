@@ -8,18 +8,18 @@ import InternetIcon from "../../assets/tracks/internet.svg?react";
 const tracksData = [
   {
     title: "GenAI",
-    description: "Use the power of generative AI to create original, interactive experiences!",
+    description: "Use the power of generative AI to create original, interactive experiences.",
     Icon: AIIcon,
   },
   {
     title: "Interactive Media Arts: Mixed Reality (AR/VR)",
     description:
-      "Craft dynamic user experiences with augmented and virtual reality technologies, combining artistry with technical expertise for innovative design solutions.",
+      "Craft dynamic user experiences with augmented and virtual reality technologies, combining artistry with technical expertise.",
     Icon: InternetIcon,
   },
   {
     title: "Security & Privacy",
-    description: "Develop solutions to enhance security and privacy to protect users and the digital ecosystemn.",
+    description: "Develop solutions to enhance security and privacy to protect users and the digital ecosystem.",
     Icon: SecurityIcon,
   },
   {
@@ -34,7 +34,7 @@ const TrackInfo = ({ title, description, Icon }) => {
   TrackInfo.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    Icon: PropTypes.element.isRequired,
+    Icon: PropTypes.elementType.isRequired,
   };
   return (
     <div>
