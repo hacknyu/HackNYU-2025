@@ -2,13 +2,53 @@ import React, { useState } from 'react';
 
 export default function FAQ() {
   const faqQuestions = [
-    { question: 'What is HackNYU?', answer: 'HackNYU is an annual hackathon hosted by New York University where students collaborate to build innovative projects.' },
-    { question: 'Which payment methods are accepted?', answer: 'We accept a variety of payment methods including credit cards and PayPal.' },
-    { question: 'How to get familiar with Figma?', answer: 'There are many online resources available to learn Figma. Check out Figma’s official tutorials for beginners.' },
-    { question: 'Can I get a refund?', answer: 'Refunds are possible under certain conditions. Please contact support for more details.' },
-    { question: 'Where is my order?', answer: 'You can track your order using the tracking link sent to your email.' },
-    { question: 'How does Clonify work?', answer: 'Clonify is a software solution that helps automate and manage tasks efficiently. Contact us for a full demo.' },
-  ];
+    {
+      question: 'What is HackNYU 2025?',
+      answer:
+        // "HackNYU 2025 is a 48-hour world-wide hackathon hosted by a team of NYU students. Come build your dream project, learn about the latest technologies and products from professionals and mentors, and, of course, win prizes! HackNYU is free, and made possible thanks to our wonderful sponsors and volunteers. HackNYU's hackathons are designed to promote inclusion, accessibility, and diversity and is currently open to NYU students and NYC high school students ONLY.",
+        "HackNYU 2025 is a 48-hour hackathon hosted by NYU students. Come build your dream project, learn about the latest technologies and products from professionals and mentors, and, of course, win prizes! HackNYU is free, and made possible thanks to our wonderful sponsors and volunteers.",
+    },
+    // {
+    //   question: 'Who can attend HackNYU 2025',
+    //   answer:
+    //     "NYU students and NYC high school students ONLY. Anyone 18 or older is encouraged to apply. However, we also welcome minors over the age of 16 to apply with a guardian's permission!",
+    // },
+    {
+      question: 'Where is HackNYU 2025 taking place?',
+      answer:
+        "It takes places in Brooklyn Athletic Facility gym at NYU Tandon! You will get more details upon acceptance.",
+    },
+    {
+      question: 'Do I need a team to sign up?',
+      answer:
+        'No, we actually will have a team forming opportunity during the hackathon as well as other ways to form teams beforehand once you are accepted!',
+    },
+    // {
+    //   question: 'What is the deadline to apply to HackNYU 2025?',
+    //   answer:
+    //     'The deadline to apply is ____ for NYC high school students.',
+    // },
+    {
+      question: 'Do I need prior experience?',
+      answer:
+        'No prior experience is needed! A large number of our hackers are first-time hackathon attendees!',
+    },
+    {
+      question: 'Is there a discord? Where do I join the discord?',
+      answer:
+        'Yes, you will be invited to the discord upon admissions.',
+    },
+    {
+      question: 'Will there be food and swag?',
+      answer:
+        'Yes, thanks to our kind and generous sponsors. Watch out for surprise snacks 🙂',
+    },
+    {
+      question: 'What is the team limit? Can I work alone?',
+      answer:
+        'Teams should be 4 people max. While you can hack by yourself, we discourage it in the spirit of the hackathon!',
+    },
+   ];
 
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -17,19 +57,14 @@ export default function FAQ() {
   const rightColumn = faqQuestions.filter((_, i) => i % 2 !== 0);
 
   return (
-    <div className="min-h-0 flex flex-col items-center">
-      <div className="bg-blue text-white p-6 flex flex-col justify-between min-h-[150px] w-full md:bg-transparent md:text-blue md:items-center md:min-h-0">
+    <div className="bg-blue md:rounded-t-[100px] min-h-0 flex flex-col items-center text-white">
+      <div className="p-6 flex flex-col justify-between w-full md:bg-transparent md:items-center md:min-h-0">
         <h1 className="text-2xl font-bold md:text-3xl">Frequently Asked Questions</h1>
-        
-        <p className="hidden md:block mt-2 md:mt-4 md:text-lg md:text-blue">
-          Placeholder for additional information or subtext.
-        </p>
-        
-        <p className="mt-auto text-sm md:hidden">hacknyuteam@gmail.com</p>
+        {/* <p className="mt-auto text-sm md:hidden">hack.support@nyu.edu</p> */}
       </div>
 
       {/* this will merge into one column on mobile */}
-      <div className="text-blue p-4 mt-2 rounded-b-lg w-full md:max-w-4xl md:rounded-lg">
+      <div className="p-4 mt-2 rounded-b-lg w-full md:max-w-4xl md:rounded-lg">
         <div className="flex flex-col md:flex-row gap-0 md:gap-10 space-y-4 md:space-y-0">
           {/* left column */}
           <div className="flex-1 space-y-4">
@@ -68,7 +103,7 @@ function FAQItem({ faq, isOpen, onClick }) {
         onClick={onClick}
         className="w-full text-left flex justify-between items-center focus:outline-none"
       >
-        <span className="font-medium text-custom-blue">{faq.question}</span>
+        <span className="font-medium">{faq.question}</span>
         <svg
           className={`w-6 h-6 transform transition-transform duration-200 ${
             isOpen ? 'rotate-45' : 'rotate-0'
@@ -82,7 +117,7 @@ function FAQItem({ faq, isOpen, onClick }) {
         </svg>
       </button>
       {isOpen && (
-        <div className="mt-2 text-sm text-blue">
+        <div className="mt-2 text-sm">
           {faq.answer}
         </div>
       )}
