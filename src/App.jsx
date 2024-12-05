@@ -2,6 +2,7 @@ import About from './sections/about/About';
 import Footer from './components/footer/Footer'
 import Hero from './sections/hero/Hero';
 import Navbar from './components/navbar/Navbar'
+import Tracks from './sections/tracks/Tracks';
 import { useOpen } from './context/OpenContext';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <Tracks />
       { !isOpen && <Footer /> }
     </div>
   )
