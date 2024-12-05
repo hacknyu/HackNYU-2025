@@ -1,16 +1,22 @@
+import About from './sections/about/About';
 import Footer from './components/footer/Footer'
-import FAQ from './sections/faq/FAQ'
+import Hero from './sections/hero/Hero';
+import Navbar from './components/navbar/Navbar'
+import Tracks from './sections/tracks/Tracks';
+import { useOpen } from './context/OpenContext';
 
 const App = () => {
+  const { isOpen } = useOpen();
+
   return (
-    <>
-      <h1 className="text-3xl font-bold underline font-inter text-blue">
-        Hello world!
-      </h1>
-      <FAQ />
-      <Footer />
-    </>
+    <div className="h-screen box-border m-0 p-0">
+      <Navbar />
+      <Hero />
+      <About />
+      <Tracks />
+      { !isOpen && <Footer /> }
+    </div>
   )
 }
 
-export default App
+export default App;
