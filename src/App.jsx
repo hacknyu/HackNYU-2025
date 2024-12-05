@@ -1,16 +1,22 @@
+import About from './sections/about/About';
 import Footer from './components/footer/Footer'
+import Hero from './sections/hero/Hero';
 import Navbar from './components/navbar/Navbar'
 import { useOpen } from './context/OpenContext';
+import Tracks from './sections/tracks/Tracks';
 
 const App = () => {
   const { isOpen } = useOpen();
 
   return (
-    <div className="h-screen max-w-full">
+    <div className="h-screen box-border m-0 p-0">
       <Navbar />
+      <Hero />
+      <About />
+      <Tracks />
       { !isOpen && <Footer /> }
     </div>
   )
 }
 
-export default App
+export default App;
