@@ -57,42 +57,43 @@ export default function FAQ() {
   const rightColumn = faqQuestions.filter((_, i) => i % 2 !== 0);
 
   return (
-    <div className="bg-blue md:rounded-t-[100px] min-h-0 flex flex-col items-center text-white">
-      <div className="p-6 flex flex-col justify-between w-full md:bg-transparent md:items-center md:min-h-0">
-        <h1 className="text-2xl font-bold md:text-3xl">Frequently Asked Questions</h1>
-        {/* <p className="mt-auto text-sm md:hidden">hack.support@nyu.edu</p> */}
-      </div>
+    <section className="md:mt-28" id="faq">
+      <div className="bg-blue md:rounded-t-[100px] min-h-0 flex flex-col items-center text-white py-10">
+        <div className="p-6 flex flex-col justify-between w-full md:bg-transparent md:items-center md:min-h-0">
+          <h1 className="text-[32px] font-bold">Frequently Asked Questions</h1>
+          {/* <p className="mt-auto text-sm md:hidden">hack.support@nyu.edu</p> */}
+        </div>
 
-      {/* this will merge into one column on mobile */}
-      <div className="p-4 mt-2 rounded-b-lg w-full md:max-w-4xl md:rounded-lg">
-        <div className="flex flex-col md:flex-row gap-0 md:gap-10 space-y-4 md:space-y-0">
-          {/* left column */}
-          <div className="flex-1 space-y-4">
-            {leftColumn.map((faq, index) => (
-              <FAQItem
-                key={index * 2}
-                faq={faq}
-                isOpen={openIndex === index * 2}
-                onClick={() => setOpenIndex(openIndex === index * 2 ? null : index * 2)}
-              />
-            ))}
-          </div>
+        {/* this will merge into one column on mobile */}
+        <div className="p-4 mt-2 rounded-b-lg w-full md:max-w-4xl md:rounded-lg">
+          <div className="flex flex-col md:flex-row gap-0 md:gap-10 space-y-4 md:space-y-0">
+            {/* left column */}
+            <div className="flex-1 space-y-4">
+              {leftColumn.map((faq, index) => (
+                <FAQItem
+                  key={index * 2}
+                  faq={faq}
+                  isOpen={openIndex === index * 2}
+                  onClick={() => setOpenIndex(openIndex === index * 2 ? null : index * 2)}
+                />
+              ))}
+            </div>
 
-          {/* right column */}
-          <div className="flex-1 space-y-4">
-            {rightColumn.map((faq, index) => (
-              <FAQItem
-                key={index * 2 + 1}
-                faq={faq}
-                isOpen={openIndex === index * 2 + 1}
-                onClick={() => setOpenIndex(openIndex === index * 2 + 1 ? null : index * 2 + 1)}
-              />
-            ))}
+            {/* right column */}
+            <div className="flex-1 space-y-4">
+              {rightColumn.map((faq, index) => (
+                <FAQItem
+                  key={index * 2 + 1}
+                  faq={faq}
+                  isOpen={openIndex === index * 2 + 1}
+                  onClick={() => setOpenIndex(openIndex === index * 2 + 1 ? null : index * 2 + 1)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-
-    </div>
+    </section>
   );
 }
 
@@ -103,7 +104,7 @@ function FAQItem({ faq, isOpen, onClick }) {
         onClick={onClick}
         className="w-full text-left flex justify-between items-center focus:outline-none"
       >
-        <span className="font-medium">{faq.question}</span>
+        <span className="font-medium text-md">{faq.question}</span>
         <svg
           className={`w-6 h-6 transform transition-transform duration-200 ${
             isOpen ? 'rotate-45' : 'rotate-0'
