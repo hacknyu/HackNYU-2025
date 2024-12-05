@@ -21,7 +21,7 @@ export default function FAQ() {
     {
       question: 'Do I need a team to sign up?',
       answer:
-        'No, we actually will have a team forming opportunity during the hackathon as well as other ways to form teams beforehand once you are accepted!',
+        'No, we will have a team forming opportunity during the hackathon as well as other ways to form teams beforehand once you are accepted!',
     },
     // {
     //   question: 'What is the deadline to apply to HackNYU 2025?',
@@ -57,39 +57,37 @@ export default function FAQ() {
   const rightColumn = faqQuestions.filter((_, i) => i % 2 !== 0);
 
   return (
-    <section className="md:mt-28" id="faq">
-      <div className="bg-blue md:rounded-t-[100px] min-h-0 flex flex-col items-center text-white py-10">
-        <div className="p-6 flex flex-col justify-between w-full md:bg-transparent md:items-center md:min-h-0">
-          <h1 className="text-[32px] font-bold">Frequently Asked Questions</h1>
-          {/* <p className="mt-auto text-sm md:hidden">hack.support@nyu.edu</p> */}
-        </div>
+    <section id="faq" className="bg-blue md:rounded-t-[100px] min-h-0 flex flex-col items-center text-white px-8 py-8 md:py-20">
+      <div className="flex flex-col justify-between w-full md:bg-transparent md:items-center md:min-h-0">
+        <h1 className="text-[32px] font-bold">Frequently Asked Questions</h1>
+        {/* <p className="mt-auto text-sm md:hidden">hack.support@nyu.edu</p> */}
+      </div>
 
-        {/* this will merge into one column on mobile */}
-        <div className="p-4 mt-2 rounded-b-lg w-full md:max-w-4xl md:rounded-lg">
-          <div className="flex flex-col md:flex-row gap-0 md:gap-10 space-y-4 md:space-y-0">
-            {/* left column */}
-            <div className="flex-1 space-y-4">
-              {leftColumn.map((faq, index) => (
-                <FAQItem
-                  key={index * 2}
-                  faq={faq}
-                  isOpen={openIndex === index * 2}
-                  onClick={() => setOpenIndex(openIndex === index * 2 ? null : index * 2)}
-                />
-              ))}
-            </div>
+      {/* this will merge into one column on mobile */}
+      <div className="mt-12 rounded-b-lg w-full md:max-w-4xl md:rounded-lg">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-10 space-y-4 md:space-y-0">
+          {/* left column */}
+          <div className="flex-1 space-y-4">
+            {leftColumn.map((faq, index) => (
+              <FAQItem
+                key={index * 2}
+                faq={faq}
+                isOpen={openIndex === index * 2}
+                onClick={() => setOpenIndex(openIndex === index * 2 ? null : index * 2)}
+              />
+            ))}
+          </div>
 
-            {/* right column */}
-            <div className="flex-1 space-y-4">
-              {rightColumn.map((faq, index) => (
-                <FAQItem
-                  key={index * 2 + 1}
-                  faq={faq}
-                  isOpen={openIndex === index * 2 + 1}
-                  onClick={() => setOpenIndex(openIndex === index * 2 + 1 ? null : index * 2 + 1)}
-                />
-              ))}
-            </div>
+          {/* right column */}
+          <div className="flex-1 space-y-4">
+            {rightColumn.map((faq, index) => (
+              <FAQItem
+                key={index * 2 + 1}
+                faq={faq}
+                isOpen={openIndex === index * 2 + 1}
+                onClick={() => setOpenIndex(openIndex === index * 2 + 1 ? null : index * 2 + 1)}
+              />
+            ))}
           </div>
         </div>
       </div>

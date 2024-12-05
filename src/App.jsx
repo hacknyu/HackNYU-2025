@@ -7,7 +7,7 @@ import Tracks from './sections/tracks/Tracks';
 
 const App = () => {
   return (
-    <div className="h-screen box-border m-0 p-0 scroll-m-20">
+    <div className="h-screen m-0 p-0 scroll-m-20">
       <Navbar />
       <Hero />
       <About />

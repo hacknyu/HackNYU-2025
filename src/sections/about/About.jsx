@@ -21,15 +21,12 @@ const About = () => {
   ]
   
   return (
-    <section className="pt-20" id="about">
-      <div className="md:flex md:flex-col md:justify-center md:items-center bg-blue md:rounded-t-[100px] p-10 text-white overflow-hidden">
-        <h2 className="text-[32px] font-bold">About Us</h2>
-        <br/>
-        <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-center gap-5">
-          {info.map((item, index) => (
-            <Card key={index} info={item}/>
-          ))}
-        </div>
+    <section id="about" className="md:flex md:flex-col md:justify-center md:items-center bg-blue md:rounded-t-[100px] px-8 py-8 md:py-20 text-white overflow-hidden">
+      <h2 className="text-[32px] font-bold mb-12">About Us</h2>
+      <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-center gap-5">
+        {info.map((item, index) => (
+          <Card key={index} info={item}/>
+        ))}
       </div>
     </section>
   )

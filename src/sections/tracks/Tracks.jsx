@@ -51,7 +51,7 @@ const TrackInfo = ({ title, description, Icon }) => {
 
 const Tracks = () => {
   return (
-    <section className="pt-20 pb-10 px-10 md:my-24" id="tracks">
+    <section id="tracks" className="p-8 md:my-20">
       <h1 className="text-[32px] font-bold text-blue md:text-center mb-12">Tracks</h1>
       <div className="md:flex items-start md:items-center justify-center">
         <div className="flex flex-col gap-8 md:gap-4 md:grid md:grid-cols-2">
