@@ -4,7 +4,7 @@ import flipArrow from '../../assets/flipArrow.svg';
 
 const Card = ({ info }) => {
     const [flipped, setFlipped] = useState(false);
-    const cardStyle = `flex flex-col justify-center items-center font-bold border-2 border-white w-[270px] h-[270px] p-5 bg-custom-gradient hover:cursor-pointer`;
+    const cardStyle = `flex flex-col justify-center items-center font-bold border-2 border-white w-[270px] h-[270px] rounded p-5 hover:cursor-pointer`;
 
     const handleClick = (e) => {
         e.preventDefault();
