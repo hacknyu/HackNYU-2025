@@ -7,7 +7,7 @@ const Hero = () => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue">
           February 8-9, 2025
         </h1>
-        <p className="text-xl md:text-3xl lg:text-4xl text-blue leading-relaxed mb-4">
+        <p className="text-xl md:text-3xl lg:text-4xl text-blue leading-relaxed mt-2 mb-8">
           Brooklyn Athletic Facility
         </p>
         <div className="flex flex-col items-start sm:flex-row sm:items-center">
@@ -29,7 +29,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col justify-center text-6xl sm:text-7xl lg:text-8xl text-white font-bold w-3/4 sm:w-[400px] h-[500px] mx-auto mt-12 lg:mt-20 md:pr-8">
+      <div className="flex flex-col justify-center text-6xl sm:text-7xl lg:text-8xl text-white font-bold w-3/4 sm:w-[400px] h-[500px] mx-auto mt-10 lg:mt-20 md:pr-8">
         <span className="bg-blue py-8 rounded-full w-full text-center -rotate-12">HACK</span>
         <span className="bg-orange py-8 rounded-full w-full text-center -mt-2 ml-8">NYU</span>
         <span className="bg-black py-8 rounded-full w-full text-center -mt-4 -ml-10">2025</span>
