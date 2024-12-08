@@ -49,7 +49,6 @@ const Navbar = () => {
           duration={500}
           offset={-75}
           className="hover:cursor-pointer hover:text-dark_blue"
-          onClick={handleClick}
         >
           About
         </Link>
@@ -61,7 +60,6 @@ const Navbar = () => {
           duration={500}
           offset={-75}
           className="hover:cursor-pointer hover:text-dark_blue"
-          onClick={handleClick}
         >
           Tracks
         </Link>
@@ -73,7 +71,6 @@ const Navbar = () => {
           duration={500}
           offset={-75}
           className="hover:cursor-pointer hover:text-dark_blue"
-          onClick={handleClick}
         >
           FAQ
         </Link>
