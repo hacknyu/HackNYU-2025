@@ -128,7 +128,7 @@ const Navbar = () => {
         } 
       </div>
       <div className="md:w-[100px] md:mr-5">
-        <a className="hidden md:block bg-blue text-white py-3 px-4 md:text-xl border-none rounded cursor-pointer transition-colors duration-300 hover:cursor-pointer hover:bg-dark_blue"
+        <a className="hidden md:block bg-blue text-white py-2 px-4 md:text-xl border-none rounded cursor-pointer transition-colors duration-300 hover:cursor-pointer hover:bg-dark_blue"
             href="https://forms.gle/eUhikbS4VpcnXTvA9"
             target="_blank"
             rel="noopener noreferrer"
