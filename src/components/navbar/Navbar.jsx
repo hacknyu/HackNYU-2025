@@ -137,7 +137,9 @@ const Navbar = () => {
         </a>
       </div>
 
-      <a id="mlh-trust-badge" className='mlh-badge' href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" className='width-100'/></a>
+      <div className={`block max-w-[100px] min-w-[60px] fixed left-[120px] top-0 w-[10%] z-[10000] ${isOpen ? 'hidden' : 'block'}`}>
+        <a id="mlh-trust-badge" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" className='w-full'/></a>
+      </div>
     </nav>
   );
 };
