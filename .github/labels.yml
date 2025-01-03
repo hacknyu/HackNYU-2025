@@ -22,3 +22,9 @@ navbar:
 team:
 - changed-files:
   - any-glob-to-any-file: 'src/sections/team/**/*'
+sponsor:
+- changed-files:
+  - any-glob-to-any-file: 'src/sections/sponsor/**/*'
+schedule:
+- changed-files:
+  - any-glob-to-any-file: 'src/sections/schedule/**/*'
