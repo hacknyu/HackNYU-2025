@@ -15,10 +15,13 @@ const Card = ({ info }) => {
         <ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
         <div onClick={handleClick} className={cardStyle}>
             <div className="text-center">
-                <h2 className="text-2xl">{info.header}</h2>
-                <h3 className="text-2xl">{info.subheader}</h3>
+            <h2 className="text-2xl">{info.header}</h2>
+            <h3 className="text-2xl">{info.subheader}</h3>
             </div>
-            <img src={flipArrow} alt="flip arrow" className="w-10 h-10 mt-10"/>
+            <div className="mt-10 flex flex-col items-center">
+                <img src={flipArrow} alt="flip arrow" className="w-10 h-10 mb-2" />
+                <span className="text-md font-medium text-white">Flip</span>
+            </div>
         </div>
 
         <div onClick={handleClick} className={cardStyle}>
