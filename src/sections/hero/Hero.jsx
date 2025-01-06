@@ -20,13 +20,15 @@ const Hero = () => {
               Register as a Hacker
             </a>
           </button>
-          <a className="text-blue underline py-5 sm:px-5"
-              href="https://forms.gle/Mo6ruwsNf6xHC89N8" 
-              target="_blank" 
-              rel="noopener noreferrer"
-          >
-            Become a Mentor/Volunteer
-          </a>
+          <button className="text-orange py-2 px-4 md:text-xl border border-orange rounded cursor-pointer transition-colors duration-300 ml-2">
+            <a
+                href="https://forms.gle/Mo6ruwsNf6xHC89N8" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+              Become a Mentor/Volunteer
+            </a>
+          </button>
         </div>
       </div>
       <div className="flex flex-col justify-center text-6xl sm:text-7xl lg:text-8xl text-white font-bold w-3/4 sm:w-[400px] h-[500px] mx-auto mt-10 lg:mt-20 md:pr-8">
