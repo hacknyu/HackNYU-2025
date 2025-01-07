@@ -13,17 +13,20 @@ const Card = ({ info }) => {
 
     return (
         <ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
-        <div onClick={handleClick} className={cardStyle}>
-            <div className="text-center">
-                <h2 className="text-2xl">{info.header}</h2>
-                <h3 className="text-2xl">{info.subheader}</h3>
+            <div onClick={handleClick} className={`${cardStyle} group`}>
+                <div className="text-center">
+                    <h2 className="text-2xl">{info.header}</h2>
+                    <h3 className="text-2xl">{info.subheader}</h3>
+                </div>
+                <div className="mt-10 flex flex-row items-center space-x-2 group-hover:scale-110 group-hover:brightness-90 transition-transform duration-300 ease-in-out">
+                    <span className="text-xl">Flip</span>
+                    <img src={flipArrow} alt="flip arrow" className="w-10 h-10 mb-2" />
+                </div>
             </div>
-            <img src={flipArrow} alt="flip arrow" className="w-10 h-10 mt-10"/>
-        </div>
 
-        <div onClick={handleClick} className={cardStyle}>
-            <p className="text-md md:text-lg text-center">{info.description}</p>
-        </div>
+            <div onClick={handleClick} className={cardStyle}>
+                <p className="text-md md:text-lg text-center">{info.description}</p>
+            </div>
         </ReactCardFlip>
     )
 }

@@ -11,7 +11,7 @@ const About = () => {
     {
       header: '52+',
       subheader: 'Locations',
-      description: 'Participants from 52+ locations have attended our events, including Jamaica, New Dehli, and Seoul.'
+      description: 'Participants from 52+ locations have attended our events, including Jamaica, New Delhi, and Seoul.'
     },
     {
       header: '1000+',
