@@ -18,7 +18,7 @@ const Card = ({ info }) => {
                     <h2 className="text-2xl">{info.header}</h2>
                     <h3 className="text-2xl">{info.subheader}</h3>
                 </div>
-                <div className="mt-10 flex flex-row items-center space-x-2 group-hover:scale-105 group-hover:text-orange-600 transition-transform duration-300 ease-in-out">
+                <div className="mt-10 flex flex-row items-center space-x-2 group-hover:scale-110 group-hover:brightness-90 transition-transform duration-300 ease-in-out">
                     <span className="text-xl">Flip</span>
                     <img src={flipArrow} alt="flip arrow" className="w-10 h-10 mb-2" />
                 </div>
