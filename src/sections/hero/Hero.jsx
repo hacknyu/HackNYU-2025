@@ -8,7 +8,7 @@ const Hero = () => {
           February 8-9, 2025
         </h1>
         <p className="text-xl md:text-3xl lg:text-4xl text-blue leading-relaxed mt-2 mb-8">
-          Brooklyn Athletic Facility
+          NYU Tandon School of Engineering
         </p>
         <div className="flex flex-col items-start sm:flex-row sm:items-center">
           <button className="bg-orange text-white py-2 px-4 md:text-xl border-none rounded cursor-pointer transition-colors duration-300 hover:bg-orange-600">
