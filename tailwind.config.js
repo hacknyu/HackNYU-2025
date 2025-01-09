@@ -5,9 +5,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      inter: ['Inter', 'sans-serif'],
-    },
     extend: {
       colors: {
         blue: {
@@ -15,10 +12,13 @@ export default {
         },
         orange: {
           DEFAULT: '#F95620',
-        }
+        },
+      },
+      fontFamily: {
+        inter: ['Inter'],
+        wix: ['"Wix Madefor Display"', 'sans-serif'],
       },
     },
   },
   plugins: [],
-}
-
+};
