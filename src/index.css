@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 @tailwind base;
@@ -8,5 +9,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.font-wix {
+  font-family: 'Wix Madefor Display', sans-serif;
+}
+
+.font-inter {
   font-family: 'Inter', sans-serif;
 }
