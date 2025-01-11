@@ -13,7 +13,7 @@ const entries = [
     {
       name: "Capital One",
       path: "capitalOne.png",
-      rank: 1,
+      rank: 2,
     },
   ],
   [
@@ -32,12 +32,12 @@ const entries = [
     {
       name: "NordVPN",
       path: "nordvpn.png",
-      rank: 4,
+      rank: 3,
     },
     {
       name: "NordPass",
       path: "nordpass.png",
-      rank: 4,
+      rank: 3,
     },
   ],
   [
@@ -81,8 +81,9 @@ const Sponsor = ({ name, path, rank }) => {
     <div
       className={
         rank == 1
-          ? `w-3/5 flex justify-center items-center`
-          : "md:w-1/6 w-full flex justify-center items-center self-stretch mx-4"
+          ? `w-4/5 flex justify-center items-center`
+          : rank == 2 ? "w-3/5 flex justify-center items-center"
+          : rank == 3 ? "w-2/6 flex justify-center items-center mx-4" : "md:w-2/12 w-full flex justify-center items-center md:mx-4 mx-2"
       }>
       <img alt={name} src={`/src/assets/sponsors/${path}`} className="object-contain w-full" />
     </div>
@@ -95,7 +96,7 @@ const Sponsors = () => {
       <h1 className="text-[32px] font-bold text-blue md:text-center mb-12">Sponsors</h1>
       <div className>
         {entries.map((row, i) => (
-          <div className="flex items-center justify-center mb-8" key={i}>
+          <div className="flex items-center justify-center mb-12" key={i}>
             {row.map((entry, j) => (
               <Sponsor key={j} name={entry.name} path={entry.path} rank={entry.rank} />
             ))}
