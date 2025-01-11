@@ -21,11 +21,13 @@ const entries = [
       name: "incogni",
       path: "incogni.png",
       rank: 3,
+      link: "https://incogni.com"
     },
     {
       name: "Saily",
       path: "saily.png",
       rank: 3,
+      link: "https://saily.com"
     },
   ],
   [
@@ -33,11 +35,13 @@ const entries = [
       name: "NordVPN",
       path: "nordvpn.png",
       rank: 3,
+      link: "https://nordvpn.com/hackathons"
     },
     {
       name: "NordPass",
       path: "nordpass.png",
       rank: 3,
+      link: "https://nordpass.com",
     },
   ],
   [
@@ -64,18 +68,20 @@ const entries = [
       rank: 6,
     },
     {
-      name: "Stand Out Stickers",
+      name: "StandOut Stickers",
       path: "standOutStickers.png",
       rank: 6,
+      link: "http://hackp.ac/mlh-StandOutStickers-hackathons"
     },
   ],
 ];
 
-const Sponsor = ({ name, path, rank }) => {
+const Sponsor = ({ name, path, rank, link }) => {
   Sponsor.propTypes = {
     name: PropTypes.string.isRequired,
     path: PropTypes.string.isRequired,
     rank: PropTypes.number.isRequired,
+    link: PropTypes.string
   };
   return (
     <div
@@ -85,7 +91,9 @@ const Sponsor = ({ name, path, rank }) => {
           : rank == 2 ? "w-3/5 flex justify-center items-center"
           : rank == 3 ? "w-2/6 flex justify-center items-center mx-4" : "md:w-2/12 w-full flex justify-center items-center md:mx-4 mx-2"
       }>
+        <a href={link} target="_blank">
       <img alt={name} src={`/src/assets/sponsors/${path}`} className="object-contain w-full" />
+        </a>
     </div>
   );
 };
@@ -98,7 +106,7 @@ const Sponsors = () => {
         {entries.map((row, i) => (
           <div className="flex items-center justify-center mb-12" key={i}>
             {row.map((entry, j) => (
-              <Sponsor key={j} name={entry.name} path={entry.path} rank={entry.rank} />
+              <Sponsor key={j} name={entry.name} path={entry.path} rank={entry.rank} link={entry.link} />
             ))}
           </div>
         ))}
