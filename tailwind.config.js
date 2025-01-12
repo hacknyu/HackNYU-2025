@@ -15,8 +15,7 @@ export default {
         },
       },
       fontFamily: {
-        inter: ['Inter'],
-        wix: ['Wix Madefor Display'],
+        inter: ['Inter']
       },
     },
   },
