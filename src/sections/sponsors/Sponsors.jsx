@@ -100,7 +100,7 @@ const Sponsor = ({ name, path, rank, link }) => {
 
 const Sponsors = () => {
   return (
-    <section className="p-8" id="Sponsors">
+    <section className="p-8" id="sponsors">
       <h1 className="text-[32px] font-bold text-blue md:text-center mb-12">Sponsors</h1>
       <div className>
         {entries.map((row, i) => (
