@@ -18,20 +18,6 @@ const entries = [
   ],
   [
     {
-      name: "incogni",
-      path: "incogni.png",
-      rank: 3,
-      link: "https://incogni.com"
-    },
-    {
-      name: "Saily",
-      path: "saily.png",
-      rank: 3,
-      link: "https://saily.com"
-    },
-  ],
-  [
-    {
       name: "NordVPN",
       path: "nordvpn.png",
       rank: 3,
@@ -42,6 +28,20 @@ const entries = [
       path: "nordpass.png",
       rank: 3,
       link: "https://nordpass.com",
+    },
+  ],
+  [
+    {
+      name: "incogni",
+      path: "incogni.png",
+      rank: 3,
+      link: "https://incogni.com"
+    },
+    {
+      name: "Saily",
+      path: "saily.png",
+      rank: 3,
+      link: "https://saily.com"
     },
   ],
   [
@@ -89,10 +89,10 @@ const Sponsor = ({ name, path, rank, link }) => {
         rank == 1
           ? `w-4/5 flex justify-center items-center`
           : rank == 2 ? "w-3/5 flex justify-center items-center"
-          : rank == 3 ? "md:w-2/6  w-1/2 flex justify-center items-center mx-4" : "md:w-2/12 w-1/4 flex justify-center items-center md:mx-4 mx-2"
+          : rank == 3 ? "md:w-2/6 w-1/2 flex justify-center items-center mx-4" : "md:w-2/12 w-1/4 flex justify-center items-center md:mx-4 mx-2"
       }>
         <a href={link} target="_blank">
-      <img alt={name} src={`/src/assets/sponsors/${path}`} className={rank <= 3 ? "object-contain" : "object-contain max-h-12"} />
+      <img alt={name} src={`/src/assets/sponsors/${path}`} className={rank < 3 ? "object-contain" : rank == 3 ? "object-contain max-h-20" : "object-contain max-h-12"} />
         </a>
     </div>
   );
