@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FinTechIcon from "../../assets/tracks/fintech.svg?react";
+import FintechIcon from "../../assets/tracks/fintech.svg?react";
 import SustainabilityIcon from "../../assets/tracks/sustainability.svg?react";
 import SecurityIcon from "../../assets/tracks/lock.svg?react";
 import InternetIcon from "../../assets/tracks/internet.svg?react";
@@ -9,7 +9,7 @@ const tracksData = [
   {
     title: "FinTech/Quant: Financial Empowerment",
     description: "Bring the Wall Street in you to create projects revolving around financial stability, NFTs, financial literacy, quant strat, and money, money, money.",
-    Icon: FinTechIcon,
+    Icon: FintechIcon,
   },
   {
     title: "Interactive Media Arts: Mixed Reality (AR/VR)",
