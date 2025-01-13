@@ -65,6 +65,17 @@ const Navbar = () => {
         </Link>
 
         <Link
+          to="sponsors"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-75}
+          className="hover:cursor-pointer hover:text-dark_blue"
+        >
+          Sponsors
+        </Link>
+        
+        <Link
           to="faq"
           spy={true}
           smooth={true}
@@ -110,6 +121,18 @@ const Navbar = () => {
               onClick={handleClick}
             >
               Tracks
+            </Link>
+
+            <Link
+              to="sponsors"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-75}
+              className="hover:cursor-pointer hover:brightness-90"
+              onClick={handleClick}
+            >
+              Sponsors
             </Link>
 
             <Link
