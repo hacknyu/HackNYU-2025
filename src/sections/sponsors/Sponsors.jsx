@@ -1,31 +1,42 @@
 import React from "react";
 import PropTypes from "prop-types";
+import google from "../../assets/sponsors/google.png";
+import capitalOne from "../../assets/sponsors/capitalOne.png";
+import nordvpn from "../../assets/sponsors/nordvpn.png";
+import nordpass from "../../assets/sponsors/nordpass.png";
+import incogni from "../../assets/sponsors/incogni.png";
+import saily from "../../assets/sponsors/saily.png";
+import it from "../../assets/sponsors/it.png";
+import nyu from "../../assets/sponsors/nyu.png";
+import campusSafety from "../../assets/sponsors/campusSafety.png";
+import wasserman from "../../assets/sponsors/wasserman.png";
+import standOutStickers from "../../assets/sponsors/standOutStickers.png";
 
 const entries = [
   [
     {
       name: "google",
-      path: "google.png",
+      src: google,
       rank: 1,
     },
   ],
   [
     {
       name: "Capital One",
-      path: "capitalOne.png",
+      src: capitalOne,
       rank: 2,
     },
   ],
   [
     {
       name: "NordVPN",
-      path: "nordvpn.png",
+      src: nordvpn,
       rank: 3,
       link: "https://nordvpn.com/hackathons"
     },
     {
       name: "NordPass",
-      path: "nordpass.png",
+      src: nordpass,
       rank: 3,
       link: "https://nordpass.com",
     },
@@ -33,13 +44,13 @@ const entries = [
   [
     {
       name: "incogni",
-      path: "incogni.png",
+      src: incogni,
       rank: 3,
       link: "https://incogni.com"
     },
     {
       name: "Saily",
-      path: "saily.png",
+      src: saily,
       rank: 3,
       link: "https://saily.com"
     },
@@ -47,39 +58,39 @@ const entries = [
   [
     {
       name: "NYU IT",
-      path: "it.png",
+      src: it,
       rank: 5,
     },
     {
       name: "NYU",
-      path: "nyu.png",
+      src: nyu,
       rank: 5,
     },
     {
       name: "NYU Department of Campus Safety",
-      path: "campusSafety.png",
+      src: campusSafety,
       rank: 5,
     },
   ],
   [
     {
       name: "NYU Wasserman",
-      path: "wasserman.png",
+      src: wasserman,
       rank: 6,
     },
     {
       name: "StandOut Stickers",
-      path: "standOutStickers.png",
+      src: standOutStickers,
       rank: 6,
       link: "http://hackp.ac/mlh-StandOutStickers-hackathons"
     },
   ],
 ];
 
-const Sponsor = ({ name, path, rank, link }) => {
+const Sponsor = ({ name, src, rank, link }) => {
   Sponsor.propTypes = {
     name: PropTypes.string.isRequired,
-    path: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
     rank: PropTypes.number.isRequired,
     link: PropTypes.string
   };
@@ -92,7 +103,7 @@ const Sponsor = ({ name, path, rank, link }) => {
           : rank == 3 ? "md:w-2/6 w-1/2 flex justify-center items-center mx-4" : "md:w-2/12 w-1/4 flex justify-center items-center md:mx-4 mx-2"
       }>
         <a href={link} target="_blank">
-      <img alt={name} src={`/src/assets/sponsors/${path}`} className={rank < 3 ? "object-contain" : rank == 3 ? "object-contain max-h-20" : "object-contain max-h-12"} />
+          <img alt={name} src={src} className={rank < 3 ? "object-contain" : rank == 3 ? "object-contain max-h-20" : "object-contain max-h-12"} />
         </a>
     </div>
   );
@@ -106,7 +117,7 @@ const Sponsors = () => {
         {entries.map((row, i) => (
           <div className="flex items-center justify-center mb-12" key={i}>
             {row.map((entry, j) => (
-              <Sponsor key={j} name={entry.name} path={entry.path} rank={entry.rank} link={entry.link} />
+              <Sponsor key={j} name={entry.name} src={entry.src} rank={entry.rank} link={entry.link} />
             ))}
           </div>
         ))}
