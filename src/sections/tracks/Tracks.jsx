@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import AIIcon from "../../assets/tracks/ai.svg?react";
+import FintechIcon from "../../assets/tracks/fintech.svg?react";
 import SustainabilityIcon from "../../assets/tracks/sustainability.svg?react";
 import SecurityIcon from "../../assets/tracks/lock.svg?react";
 import InternetIcon from "../../assets/tracks/internet.svg?react";
 
 const tracksData = [
   {
-    title: "GenAI",
-    description: "Use the power of generative AI to create original, interactive experiences.",
-    Icon: AIIcon,
+    title: "FinTech/Quant: Financial Empowerment",
+    description: "Bring the Wall Street in you to create projects revolving around financial stability, NFTs, financial literacy, quant strat, and money, money, money.",
+    Icon: FintechIcon,
   },
   {
     title: "Interactive Media Arts: Mixed Reality (AR/VR)",
