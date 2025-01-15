@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero = () => {
   return (
     <section className="flex flex-col-reverse justify-center min-h-screen w-full px-8 md:flex-row md:justify-between md:items-center md:gap-10">

@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import FintechIcon from "../../assets/tracks/fintech.svg?react";
 import SustainabilityIcon from "../../assets/tracks/sustainability.svg?react";
