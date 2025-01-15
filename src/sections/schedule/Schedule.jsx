@@ -3,7 +3,7 @@ import {  locationLinks,
           sundayScheduleWeb,
           saturdayMobileScheduleData,
           sundayMobileScheduleData
-        } from ".";
+        } from "./data.js";
 
 const Schedule = () => {
   const thStyle = "w-1/5 bg-blue text-white p-3 rounded-xl text-s font-bold text-center"
@@ -54,7 +54,7 @@ const Schedule = () => {
                 
                 <div className={`flex flex-col ${section.location === undefined ? 'self-center' : 'items-start'}`}>
                   <span className="text-xl font-bold">{section.description}</span>
-                    {section.location && Object.hasOwn(section.location) ? (
+                    {Object.hasOwn(locationLinks, section.location) ? (
                       <span className="text-sm">
                         <a 
                           href={locationLinks[section.location]} 
@@ -66,7 +66,7 @@ const Schedule = () => {
                         </a>
                       </span>
                     ) :
-                    <span>{section.location}</span>
+                    <span className="text-sm">{section.location}</span>
                     }
                 </div>
               </div>
