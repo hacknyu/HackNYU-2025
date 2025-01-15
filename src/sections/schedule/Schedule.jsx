@@ -352,7 +352,7 @@ const Schedule = () => {
       </div>
 
       <div className="sm:hidden">
-        <div className="bg-blue min-h-screen rounded-t-[32px] overflow-hidden pt-8 pb-16">
+        <div className="bg-blue min-h-screen overflow-hidden pt-8 pb-16">
           <h2 className="text-white text-[32px] font-bold px-5 pt-6 pb-2">Saturday</h2>
           <div className="h-[2px] bg-white/30 mx-6"></div>
           {renderMobileScheduleSections(saturdayMobileScheduleData)}
