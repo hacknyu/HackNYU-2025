@@ -79,7 +79,7 @@ const Schedule = () => {
   };
 
   return (
-    <section id="schedule" className="md:p-8 my-20 min-h-screen min-w-screen flex flex-col bg-white sm:bg-white font-inter"
+    <section id="schedule" className="md:p-8 md:my-20 min-h-screen min-w-screen flex flex-col bg-white sm:bg-white font-inter"
       style={{
         transform: `scale(1)`,
         transformOrigin: 'center center',
