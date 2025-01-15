@@ -5,18 +5,11 @@ const Schedule = () => {
   const BASE_WIDTH = window.screen.width;
   const BASE_HEIGHT = window.screen.height;
 
-  useEffect(() => {
-    const handleResize = () => {
-      const scaleX = window.innerWidth / BASE_WIDTH;
-      const scaleY = window.innerHeight / BASE_HEIGHT;
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const mapsLink = {
+    "Tandon Gym": "https://maps.app.goo.gl/1hBFjvhqqGynxgt48",
+    "MakerSpace Foyer": "https://maps.app.goo.gl/4qieFxKLkprQLvHY8",
+    "Pfizer Auditorium": "https://maps.app.goo.gl/r1Fv2m8GxvZCjcQZ8"
+  }
 
   const renderTableCell = (content, isTimeColumn = false) => {
     const isStarTime = content === "●";
@@ -45,7 +38,6 @@ const Schedule = () => {
 
   const renderMobileScheduleSections = (scheduleData, predefinedSectionsInput = null) => {
     const { predefinedSections } = filterAdditionalMobileEvents(scheduleData, predefinedSectionsInput);
-
     return (
       <div className="w-full px-5 font-inter">
         {predefinedSections.map((section, index) => (
@@ -63,7 +55,7 @@ const Schedule = () => {
                 <div className={`flex flex-col ${section.location === undefined ? 'self-center' : 'items-start'}`}>
                   <span className="text-xl font-bold">{section.description}</span>
                   {section.location && (
-                    <span className="text-sm">{section.location}</span>
+                    <a className="text-sm hover:cursor-pointer hover:underline" href={mapsLink[section.location]}>{section.location}</a>
                   )}
                 </div>
               </div>
@@ -76,294 +68,20 @@ const Schedule = () => {
     );
   };
 
-  const saturdayScheduleData = [
-    {
-      time: "9:30 AM - 10:00 AM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "10:00 AM - 10:30 AM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "10:30 AM - 11:00 AM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "11:00 AM - 11:30 AM",
-      tandonGym: "Opening Ceremony",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "11:30 AM - 12:00 PM",
-      tandonGym: "Team Formation",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "12:00 PM - 12:30 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "12:30 PM - 1:00 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "1:00 PM - 1:30 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "1:30 PM - 2:00 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "2:00 PM - 2:30 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "2:30 PM - 3:00 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "3:00 PM - 3:30 PM",
-      tandonGym: "Fun-tivity",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "3:30 PM - 4:00 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "4:00 PM - 4:30 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "4:30 PM - 5:00 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "5:00 PM - 5:30 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "5:30 PM - 6:00 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "Snacks",
-      pfizer: ""
-    },
-    {
-      time: "●",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "●",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "●",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "9:00 PM - 9:30 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "9:30 PM - 10:00 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    },
-    {
-      time: "10:00 PM - 10:30 PM",
-      tandonGym: "",
-      roomA: "",
-      roomB: "",
-      food: "",
-      pfizer: ""
-    }
-  ];
-
-  const sundayScheduleData = [
-    {
-      time: "9:00 AM - 10:00 AM",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "10:00 AM - 10:30 AM",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "●",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "●",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "11:30 AM - 12:00 PM",
-      tandonGym: "Project Deadline (11:30)",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "12:00 PM - 12:30 PM",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "12:30 PM - 1:00 PM",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "1:00 PM - 1:30 PM",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "1:30 PM - 2:00 PM",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "●",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "●",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "●",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "3:00 PM - 3:30 PM",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    },
-    {
-      time: "3:30 PM - 4:00 PM",
-      tandonGym: "",
-      pfizer: "",
-      food: ""
-    }
-  ];
-
   const saturdayMobileScheduleData = [
     { startTime: "9:30 AM", endTime: "10:00 AM", description: "Check-in", location: "Tandon Gym" },
-    { startTime: "10:00 AM", endTime: "11:00 AM", description: "Breakfast"},
+    { startTime: "10:00 AM", endTime: "11:00 AM", description: "Breakfast", location: "MakerSpace Foyer"},
     { startTime: "11:00 AM", endTime: "11:30 AM", description: "Opening Ceremony", location: "Tandon Gym" },
-    { startTime: "11:30 AM", endTime: "12:00 PM", description: "Team Formation", location: "Tandon Gym" },
+    { startTime: "12:00 AM", endTime: "12:30 PM", description: "Team Formation", location: "Tandon Gym" },
     { startTime: "12:30 PM", endTime: "1:30 PM", description: "Workshop", location: "Tandon Gym" },
-    { startTime: "2:00 PM", endTime: "3:00 PM", description: "Lunch"},
+    { startTime: "2:00 PM", endTime: "3:00 PM", description: "Lunch", location: "MakerSpace Foyer"},
     { startTime: "3:00 PM", endTime: "3:30 PM", description: "Fun-tivity", location: "Tandon Gym" },
-    { startTime: "5:30 PM", endTime: "6:00 PM", description: "Snacks"},
-    { startTime: "9:00 PM", endTime: "10:30 PM", description: "Dinner"}
+    { startTime: "5:30 PM", endTime: "6:00 PM", description: "Snacks", location: "MakerSpace Foyer"},
+    { startTime: "9:00 PM", endTime: "10:30 PM", description: "Dinner", location: "MakerSpace Foyer"}
   ];
 
   const sundayMobileScheduleData = [
-    { startTime: "11:00 AM", endTime: "12:00 AM", description: "Brunch"},
+    { startTime: "11:00 AM", endTime: "12:00 AM", description: "Brunch", location: "MakerSpace Foyer"},
     { startTime: "11:30 AM", endTime: "", description: "Project Deadline!", location: "" },
     { startTime: "12:00 PM", endTime: "2:00 PM", description: "Judging", location: "Tandon Gym" },
     { startTime: "3:00 PM", endTime: "4:00 PM", description: "Closing Ceremony", location: "Pfizer Auditorium" }
@@ -385,10 +103,14 @@ const Schedule = () => {
           <thead>
             <tr>
               <th className="w-1/6"></th>
-              <th className="w-1/6 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Tandon Gym</th>
-              <th className="w-1/6 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Room A</th>
-              <th className="w-1/6 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Room B</th>
-              <th className="w-1/6 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Food</th>
+              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center hover:cursor-pointer">
+                <a className="hover:underline" href="https://maps.app.goo.gl/1hBFjvhqqGynxgt48">Tandon Gym</a>
+              </th>
+              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Room A</th>
+              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Room B</th>
+              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">
+                <a className="hover:underline" href="https://maps.app.goo.gl/4qieFxKLkprQLvHY8">MakerSpace Foyer</a>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -398,161 +120,161 @@ const Schedule = () => {
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "10:00 AM - 10:30 AM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "10:30 AM - 11:00 AM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "11:00 AM - 11:30 AM",
                 tandonGym: "Opening Ceremony",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "11:30 AM - 12:00 PM",
-                tandonGym: "Team Formation",
-                roomA: "",
-                roomB: "",
-                food: ""
-              },
-              {
-                time: "12:00 PM - 12:30 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
+              },
+              {
+                time: "12:00 PM - 12:30 PM",
+                tandonGym: "Team Formation",
+                roomA: "",
+                roomB: "",
+                makerspace: ""
               },
               {
                 time: "12:30 PM - 1:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "1:00 PM - 1:30 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "1:30 PM - 2:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "2:00 PM - 2:30 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "2:30 PM - 3:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "3:00 PM - 3:30 PM",
-                tandonGym: "Fun-tivity",
+                tandonGym: "Fun-tivity (3:00)",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "3:30 PM - 4:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "4:00 PM - 4:30 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "4:30 PM - 5:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "5:00 PM - 5:30 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "5:30 PM - 6:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: "Snacks"
+                makerspace: "Snacks (5:30)"
               },
               {
                 time: "●",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "9:00 PM - 9:30 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "9:30 PM - 10:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "10:00 PM - 10:30 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               }
             ].map((row, index) => {
               if (index >= 0 && index <= 2) {
@@ -720,7 +442,7 @@ const Schedule = () => {
                         </div>
                       </td>
                     {renderTableCell(row.roomB)}
-                    {renderTableCell(row.food)}
+                    {renderTableCell(row.makerspace)}
                   </tr>
                   );
                 }
@@ -746,7 +468,7 @@ const Schedule = () => {
                           Dinner
                         </div>
                       </td>
-                    {renderTableCell(row.food)}
+                    {renderTableCell(row.makerspace)}
                   </tr>
                   );
                 }
@@ -771,7 +493,7 @@ const Schedule = () => {
                           Breakfast
                         </div>
                       </td>
-                      {renderTableCell(row.food)}
+                      {renderTableCell(row.makerspace)}
                   </tr>
                   );
                 }
@@ -797,7 +519,7 @@ const Schedule = () => {
                           Dinner
                         </div>
                       </td>
-                    {renderTableCell(row.food)}
+                    {renderTableCell(row.makerspace)}
                   </tr>
                   );
                 }
@@ -816,7 +538,7 @@ const Schedule = () => {
                   {renderTableCell(row.tandonGym)}
                   {renderTableCell(row.roomA)}
                   {renderTableCell(row.roomB)}
-                  {renderTableCell(row.food)}
+                  {renderTableCell(row.makerspace)}
                 </tr>
               );
             })}
@@ -840,127 +562,91 @@ const Schedule = () => {
         <h2 className="text-[#0b5cd5] text-2xl md:text-4xl font-bold font-inter text-center mb-8 mt-12">Sunday Schedule</h2>
         
         <table className="w-full border-separate border-spacing-2 table-fixed">
-          <thead>
+          <thead className="w-full">
             <tr>
               <th className="w-1/6"></th>
-              <th className="w-1/6 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Tandon Gym</th>
-              <th className="w-1/6 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Pfizer Auditorium</th>
-              <th className="w-1/6 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">Food</th>
+              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center hover:cursor-pointer">
+              <a className="hover:underline" href="https://maps.app.goo.gl/1hBFjvhqqGynxgt48">Tandon Gym</a>
+              </th>
+              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">
+                <a className="hover:underline" href="https://maps.app.goo.gl/r1Fv2m8GxvZCjcQZ8">Pfizer Auditorium</a>
+              </th>
+              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-inter text-center">
+                <a className="hover:underline" href="https://maps.app.goo.gl/4qieFxKLkprQLvHY8">MakerSpace Foyer</a>
+              </th>
             </tr>
           </thead>
           <tbody>
             {[
               {
-                time: "9:00 AM - 10:00 AM",
+                time: "11:00 AM - 11:30 AM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
-              },
-              {
-                time: "10:00 AM - 10:30 AM",
-                tandonGym: "",
-                pfizer: "",
-                food: ""
-              },
-              {
-                time: "●",
-                tandonGym: "",
-                pfizer: "",
-                food: ""
-              },
-              {
-                time: "●",
-                tandonGym: "",
-                pfizer: "",
-                food: ""
+                makerspace: "Brunch"
               },
               {
                 time: "11:30 AM - 12:00 PM",
                 tandonGym: "Project Deadline (11:30)",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "12:00 PM - 12:30 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "12:30 PM - 1:00 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "1:00 PM - 1:30 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "1:30 PM - 2:00 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "3:00 PM - 3:30 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "3:30 PM - 4:00 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               }
             ].map((row, index) => {
-              if (index >= 3 && index <= 5) {
-                if (index === 3){
-                  return (
-                    <tr key={index} className="h-[50px]">
-                      {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-inter text-center">
-                          ●
-                        </td>
-                      ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
-                          {row.time}
-                        </td>
-                      )}
-                      {renderTableCell(row.tandonGym)}
-                      {renderTableCell(row.pfizer)}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-inter text-center">
-                          Brunch
-                        </div>
-                      </td>
-                  </tr>
-                  );
-                }
-              }
-              if (index >= 5 && index <= 9) {
-                if (index === 5){
+              if (index >= 2 && index <= 5) {
+                if (index === 2){
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
@@ -981,26 +667,8 @@ const Schedule = () => {
                   );
                 }
               }
-              if (index >= 11 && index <= 13) {
-                if (index === 11){
-                  return (
-                    <tr key={index} className="h-[50px]">
-                      {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-inter text-center">
-                          ●
-                        </td>
-                      ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
-                          {row.time}
-                        </td>
-                      )}
-                      {renderTableCell(row.tandonGym)}
-                  </tr>
-                  );
-                }
-              }
-              if (index >= 12 && index <= 14) {
-                if (index === 12){
+              if (index >= 9 && index <= 10) {
+                if (index === 9){
                   return (
                     <tr key={index} className="h-[50px]">
                       <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
@@ -1029,7 +697,7 @@ const Schedule = () => {
                 )}
                 {renderTableCell(row.tandonGym)}
                 {renderTableCell(row.pfizer)}
-                {renderTableCell(row.food)}
+                {renderTableCell(row.makerspace)}
               </tr>
               );
             })}
