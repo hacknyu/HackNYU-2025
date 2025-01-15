@@ -32,8 +32,8 @@ const Schedule = () => {
     }
     
     return (
-      <td className={`p-3 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5] ${isTimeColumn ? 'h-[50px] flex items-center justify-center' : 'flex flex-col'}`}>
-        <div className={`text-s font-bold font-Inter text-center ${isTimeColumn ? 'w-1/5' : ''}`}>
+      <td className={`p-3 border border-blue border-opacity-50 rounded-xl bg-white text-blue ${isTimeColumn ? 'h-[50px] flex items-center justify-center' : 'flex flex-col'}`}>
+        <div className={`text-s font-bold font-inter text-center ${isTimeColumn ? 'w-1/5' : ''}`}>
           {locationLink ? (
             <a 
               href={locationLink} 
@@ -60,7 +60,7 @@ const Schedule = () => {
     const { predefinedSections } = filterAdditionalMobileEvents(scheduleData, predefinedSectionsInput);
 
     return (
-      <div className="w-full px-5 font-Inter">
+      <div className="w-full px-5 font-inter">
         {predefinedSections.map((section, index) => (
           <div 
             key={`predefined-${index}`} 
@@ -105,7 +105,7 @@ const Schedule = () => {
                           href={section.pfizerLocationLink} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="ml-2  underline"
+                          className="ml-2 underline"
                         >
                           View Pfizer Auditorium on Maps
                         </a>
@@ -124,26 +124,31 @@ const Schedule = () => {
   };
 
   const saturdayMobileScheduleData = [
-    { startTime: "9:30 AM", endTime: "10:00 AM", description: "Check-in", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
-    { startTime: "10:00 AM", endTime: "11:00 AM", description: "Breakfast"},
+    { startTime: "9:30 AM", endTime: "10:30 AM", description: "Check-in", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
+    { startTime: "10:00 AM", endTime: "11:00 AM", description: "Breakfast", location: "MakerSpace Foyer", locationLink: "https://maps.app.goo.gl/4qieFxKLkprQLvHY8"},
     { startTime: "11:00 AM", endTime: "11:30 AM", description: "Opening Ceremony", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
-    { startTime: "11:30 AM", endTime: "12:00 PM", description: "Team Formation", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
+    { startTime: "12:00 PM", endTime: "12:30 PM", description: "Team Formation", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
+    { startTime: "12:00 PM", endTime: "3:30 PM", description: "HackNYU 2026 Booth", location: "Room A" },
     { startTime: "12:30 PM", endTime: "1:30 PM", description: "Workshop", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
-    { startTime: "2:00 PM", endTime: "3:00 PM", description: "Lunch"},
-    { startTime: "3:00 PM", endTime: "3:30 PM", description: "Fun-tivity", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
-    { startTime: "5:30 PM", endTime: "6:00 PM", description: "Snacks"},
-    { startTime: "9:00 PM", endTime: "10:30 PM", description: "Dinner"}
+    { startTime: "2:00 PM", endTime: "3:00 PM", description: "Lunch", location: "MakerSpace Foyer", locationLink: "https://maps.app.goo.gl/4qieFxKLkprQLvHY8"},
+    { startTime: "3:00 PM", endTime: "", description: "Fun-tivity", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
+    { startTime: "3:30 PM", endTime: "4:30 PM", description: "Workshop", location: "Room A" },
+    { startTime: "4:00 PM", endTime: "5:00 PM", description: "Workshop", location: "Room B" },
+    { startTime: "4:00 PM", endTime: "5:30 PM", description: "Surprise De-Stressing Event", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389"},
+    { startTime: "5:30 PM", endTime: "", description: "Snacks", location: "MakerSpace Foyer", locationLink: "https://maps.app.goo.gl/4qieFxKLkprQLvHY8"},
+    { startTime: "9:00 PM", endTime: "10:30 PM", description: "Dinner", location: "MakerSpace Foyer", locationLink: "https://maps.app.goo.gl/4qieFxKLkprQLvHY8"},
+    { startTime: "9:30 PM", endTime: "7:30 AM (Next Day)", description: "Rest Hour", location: "Room B" },
   ];
 
   const sundayMobileScheduleData = [
-    { startTime: "11:00 AM", endTime: "12:00 AM", description: "Brunch"},
+    { startTime: "11:00 AM", endTime: "12:00 AM", description: "Brunch", location: "MakerSpace Foyer", locationLink: "https://maps.app.goo.gl/4qieFxKLkprQLvHY8"},
     { startTime: "11:30 AM", endTime: "", description: "Project Deadline!", location: "" },
     { startTime: "12:00 PM", endTime: "2:00 PM", description: "Judging", location: "Tandon Gym", locationLink: "https://www.google.com/maps/place/Tandon+Gym/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" },
     { startTime: "3:00 PM", endTime: "4:00 PM", description: "Closing Ceremony", location: "Pfizer Auditorium", locationLink: "https://www.google.com/maps/place/Pfizer+Auditorium/@40.693333,-74.001389,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a9c6c9c5db:0x3dc9a3f5f5f5f5f5!8m2!3d40.693333!4d-74.001389" }
   ];
 
   return (
-    <div id="schedule" className="min-h-screen min-w-screen flex flex-col bg-white sm:bg-white font-Inter"
+    <section id="schedule" className="md:p-8 my-20 min-h-screen min-w-screen flex flex-col bg-white sm:bg-white font-inter"
       style={{
         transform: `scale(${scale})`,
         transformOrigin: 'center center',
@@ -151,13 +156,13 @@ const Schedule = () => {
       }}
     >
       <div className="hidden sm:block max-w-7xl mx-auto mb-8">
-        <h2 className="text-[#0b5cd5] text-2xl md:text-4xl font-bold font-Inter text-center mb-8 mt-12">Saturday Schedule</h2>
+        <h2 className="text-blue text-[32px] md:text-4xl font-bold font-inter text-center mb-8 mt-12">Saturday Schedule</h2>
         
         <table className="w-full border-separate border-spacing-2 table-fixed">
           <thead>
             <tr>
               <th className="w-1/5"></th>
-              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-Inter text-center">
+              <th className="w-1/5 bg-blue text-white p-3 rounded-xl text-s font-bold font-inter text-center">
                 <a 
                   href="https://maps.app.goo.gl/1hBFjvhqqGynxgt48" 
                   target="_blank" 
@@ -167,9 +172,18 @@ const Schedule = () => {
                   Tandon Gym
                 </a>
               </th>
-              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-Inter text-center">Room A</th>
-              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-Inter text-center">Room B</th>
-              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-Inter text-center">Food</th>
+              <th className="w-1/5 bg-blue text-white p-3 rounded-xl text-s font-bold font-inter text-center">Room A</th>
+              <th className="w-1/5 bg-blue text-white p-3 rounded-xl text-s font-bold font-inter text-center">Room B</th>
+              <th className="w-1/5 bg-blue text-white p-3 rounded-xl text-s font-bold font-inter text-center">
+                <a
+                  href="https://maps.app.goo.gl/4qieFxKLkprQLvHY8" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:underline cursor-pointer"
+                >
+                  MakerSpace Foyer
+                </a>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -178,7 +192,7 @@ const Schedule = () => {
                 time: "9:30 AM - 10:00 AM",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "10:00 AM - 10:30 AM",
@@ -196,118 +210,118 @@ const Schedule = () => {
                 tandonGym: "Opening Ceremony",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "11:30 AM - 12:00 PM",
-                tandonGym: "Team Formation",
+                tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "12:00 PM - 12:30 PM",
-                tandonGym: "",
+                tandonGym: "Team Formation",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "12:30 PM - 1:00 PM",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "1:00 PM - 1:30 PM",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "1:30 PM - 2:00 PM",
                 tandonGym: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "2:00 PM - 2:30 PM",
                 tandonGym: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "2:30 PM - 3:00 PM",
                 tandonGym: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "3:00 PM - 3:30 PM",
-                tandonGym: "Fun-tivity",
+                tandonGym: "Fun-tivity (3:00)",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "3:30 PM - 4:00 PM",
                 tandonGym: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "4:00 PM - 4:30 PM",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "4:30 PM - 5:00 PM",
                 roomA: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "5:00 PM - 5:30 PM",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "5:30 PM - 6:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: "Snacks"
+                makerspace: "Snacks (5:30)"
               },
               {
                 time: "●",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "9:00 PM - 9:30 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "9:30 PM - 10:00 PM",
                 tandonGym: "",
                 roomA: "",
                 roomB: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "10:00 PM - 10:30 PM",
@@ -320,17 +334,17 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold font-inter text-center">
                           Check-In
                         </div>
                       </td>
@@ -343,17 +357,17 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold font-inter text-center">
                           Workshop
                         </div>
                       </td>
@@ -366,22 +380,22 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={3}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={3}>
+                        <div className="text-s font-bold font-inter text-center">
                           Surprise De-stressing Event
                         </div>
                       </td>
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold font-inter text-center">
                           Workshop
                         </div>
                       </td>
@@ -394,18 +408,18 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       {renderTableCell(row.tandonGym)}
                       <td 
-                        className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={6}>
-                        <div className="text-s font-bold font-Inter text-center">
+                        className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={6}>
+                        <div className="text-s font-bold font-inter text-center">
                           HackNYU 2026 Booth
                         </div>
                       </td>
@@ -416,18 +430,18 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       {renderTableCell(row.tandonGym)}
                       {renderTableCell(row.roomA)}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold font-inter text-center">
                           Lunch
                         </div>
                       </td>
@@ -440,17 +454,17 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       {renderTableCell(row.tandonGym)}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold font-inter text-center">
                           Workshop
                         </div>
                       </td>
@@ -463,24 +477,24 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       {renderTableCell(row.tandonGym)}
                       {renderTableCell(row.roomA)}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold font-inter text-center">
                           Rest Hour<br />
                           <span className="text-s">(to 7:30AM next day)</span>
                         </div>
                       </td>
                     {renderTableCell(row.roomB)}
-                    {renderTableCell(row.food)}
+                    {renderTableCell(row.makerspace)}
                   </tr>
                   );
                 }
@@ -490,18 +504,18 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       {renderTableCell(row.tandonGym)}
                       {renderTableCell(row.roomA)}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold font-inter text-center">
                           Breakfast
                         </div>
                       </td>
@@ -514,19 +528,19 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
                       {renderTableCell(row.tandonGym)}
                       {renderTableCell(row.roomA)}
                       {renderTableCell(row.roomB)}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={3}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={3}>
+                        <div className="text-s font-bold font-inter text-center">
                           Dinner
                         </div>
                       </td>
@@ -537,18 +551,18 @@ const Schedule = () => {
               return (
                 <tr key={index} className="h-[50px]">
                   {row.time === '●' ? (
-                    <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                    <td className="text-blue p-2 text-s font-bold font-inter text-center">
                       ●
                     </td>
                   ) : (
-                    <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                    <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                       {row.time}
                     </td>
                   )}
                   {renderTableCell(row.tandonGym)}
                   {renderTableCell(row.roomA)}
                   {renderTableCell(row.roomB)}
-                  {renderTableCell(row.food)}
+                  {renderTableCell(row.makerspace)}
                 </tr>
               );
             })}
@@ -557,25 +571,25 @@ const Schedule = () => {
       </div>
 
       <div className="sm:hidden">
-        <div className="bg-[#0b5cd5] min-h-screen rounded-t-[32px] overflow-hidden pt-8 pb-16">
-          <h2 className="text-white text-2xl font-bold font-Inter px-5 pt-6 pb-2">Saturday</h2>
+        <div className="bg-blue min-h-screen rounded-t-[32px] overflow-hidden pt-8 pb-16">
+          <h2 className="text-white text-[32px] font-bold font-inter px-5 pt-6 pb-2">Saturday</h2>
           <div className="h-[2px] bg-white/30 mx-6"></div>
           {renderMobileScheduleSections(saturdayMobileScheduleData)}
           
-          <h2 className="text-white text-2xl font-bold font-Inter px-5 pt-16 pb-2">Sunday</h2>
+          <h2 className="text-white text-[32px] font-bold font-inter px-5 pt-16 pb-2">Sunday</h2>
           <div className="h-[2px] bg-white/30 mx-6"></div>
           {renderMobileScheduleSections(sundayMobileScheduleData)}
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto mb-12 sm:block hidden">
-        <h2 className="text-[#0b5cd5] text-2xl md:text-4xl font-bold font-Inter text-center mb-8 mt-12">Sunday Schedule</h2>
+        <h2 className="text-blue text-[32px] font-bold font-inter text-center mb-8 mt-12">Sunday Schedule</h2>
         
         <table className="w-full border-separate border-spacing-2 table-fixed">
           <thead>
             <tr>
               <th className="w-1/5"></th>
-              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-Inter text-center">
+              <th className="w-1/5 bg-blue text-white p-3 rounded-xl text-s font-bold font-inter text-center">
                 <a 
                   href="https://maps.app.goo.gl/1hBFjvhqqGynxgt48" 
                   target="_blank" 
@@ -585,7 +599,7 @@ const Schedule = () => {
                   Tandon Gym
                 </a>
               </th>
-              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-Inter text-center">
+              <th className="w-1/5 bg-blue text-white p-3 rounded-xl text-s font-bold font-inter text-center">
                 <a 
                   href="https://maps.app.goo.gl/r1Fv2m8GxvZCjcQZ8" 
                   target="_blank" 
@@ -595,135 +609,102 @@ const Schedule = () => {
                   Pfizer Auditorium
                 </a>
               </th>
-              <th className="w-1/5 bg-[#0b5cd5] text-white p-3 rounded-xl text-s font-bold font-Inter text-center">Food</th>
+              <th className="w-1/5 bg-blue text-white p-3 rounded-xl text-s font-bold font-inter text-center">
+                <a
+                  href="https://maps.app.goo.gl/4qieFxKLkprQLvHY8" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:underline cursor-pointer"
+                >
+                  MakerSpace Foyer
+                </a>
+              </th>
             </tr>
           </thead>
           <tbody>
             {[
               {
-                time: "9:00 AM - 10:00 AM",
+                time: "11:00 AM - 11:30 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
-              },
-              {
-                time: "10:00 AM - 10:30 AM",
-                tandonGym: "",
-                pfizer: "",
-                food: ""
-              },
-              {
-                time: "●",
-                tandonGym: "",
-                pfizer: "",
-                food: ""
-              },
-              {
-                time: "●",
-                tandonGym: "",
-                pfizer: "",
-                food: ""
+                makerspace: "Brunch"
               },
               {
                 time: "11:30 AM - 12:00 PM",
                 tandonGym: "Project Deadline (11:30)",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "12:00 PM - 12:30 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "12:30 PM - 1:00 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "1:00 PM - 1:30 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "1:30 PM - 2:00 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "●",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "3:00 PM - 3:30 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               },
               {
                 time: "3:30 PM - 4:00 PM",
                 tandonGym: "",
                 pfizer: "",
-                food: ""
+                makerspace: ""
               }
             ].map((row, index) => {
-              if (index >= 3 && index <= 5) {
-                if (index === 3){
+              if (index >= 2 && index <= 5) {
+                if (index === 2){
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
-                      {renderTableCell(row.tandonGym)}
-                      {renderTableCell(row.pfizer)}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
-                          Brunch
-                        </div>
-                      </td>
-                  </tr>
-                  );
-                }
-              }
-              if (index >= 5 && index <= 9) {
-                if (index === 5){
-                  return (
-                    <tr key={index} className="h-[50px]">
-                      {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
-                          ●
-                        </td>
-                      ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
-                          {row.time}
-                        </td>
-                      )}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={4}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={4}>
+                        <div className="text-s font-bold font-inter text-center">
                           Judging
                         </div>
                       </td>
@@ -736,11 +717,11 @@ const Schedule = () => {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
-                        <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                        <td className="text-blue p-2 text-s font-bold font-inter text-center">
                           ●
                         </td>
                       ) : (
-                        <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                           {row.time}
                         </td>
                       )}
@@ -749,16 +730,16 @@ const Schedule = () => {
                   );
                 }
               }
-              if (index >= 12 && index <= 14) {
-                if (index === 12){
+              if (index >= 9 && index <= 10) {
+                if (index === 9){
                   return (
                     <tr key={index} className="h-[50px]">
-                      <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                      <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                         {row.time}
                       </td>
                       {renderTableCell(row.tandonGym)}
-                      <td className="p-2 border border-[#0b5cd5] border-opacity-50 rounded-xl bg-white text-[#0b5cd5]" rowSpan={2}>
-                        <div className="text-s font-bold font-Inter text-center">
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold font-inter text-center">
                           Closing Ceremony
                         </div>
                       </td>
@@ -769,24 +750,24 @@ const Schedule = () => {
               return(
               <tr key={index} className="h-[50px]">
                 {row.time === '●' ? (
-                  <td className="text-[#0b5cd5] p-2 text-s font-bold font-Inter text-center">
+                  <td className="text-blue p-2 text-s font-bold font-inter text-center">
                     ●
                   </td>
                 ) : (
-                  <td className="bg-[#0b5cd5] text-white p-2 rounded-xl text-s font-bold font-Inter text-center ">
+                  <td className="bg-blue text-white p-2 rounded-xl text-s font-bold font-inter text-center ">
                     {row.time}
                   </td>
                 )}
                 {renderTableCell(row.tandonGym)}
                 {renderTableCell(row.pfizer)}
-                {renderTableCell(row.food)}
+                {renderTableCell(row.makerspace)}
               </tr>
               );
             })}
           </tbody>
         </table>
       </div>
-    </div>
+    </section>
   );
 };
 
