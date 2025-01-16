@@ -6,8 +6,7 @@ const Card = ({ info }) => {
     const [flipped, setFlipped] = useState(false);
     const cardStyle = `flex flex-col justify-center items-center font-bold border-2 border-white w-[270px] h-[270px] rounded p-5 hover:cursor-pointer`;
 
-    const handleClick = (e) => {
-        e.preventDefault();
+    const handleClick = () => {
         setFlipped(!flipped);
     }
 
@@ -18,7 +17,7 @@ const Card = ({ info }) => {
                     <h2 className="text-2xl">{info.header}</h2>
                     <h3 className="text-2xl">{info.subheader}</h3>
                 </div>
-                <div className="mt-10 flex flex-row items-center space-x-2 group-hover:scale-110 group-hover:brightness-90 transition-transform duration-300 ease-in-out">
+                <div className={`mt-10 flex flex-row items-center space-x-2 ${!flipped ? "hover:scale-110 hover:brightness-90 transition-transform duration-300 ease-in-out" : ""}`}>
                     <span className="text-xl">Flip</span>
                     <img src={flipArrow} alt="flip arrow" className="w-10 h-10 mb-2" />
                 </div>
