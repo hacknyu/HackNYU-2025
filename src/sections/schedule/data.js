@@ -220,7 +220,7 @@ export const saturdayMobileScheduleData = [
   { startTime: "10:00 AM", endTime: "11:00 AM", description: "Breakfast", location: "MakerSpace Foyer" },
   { startTime: "11:00 AM", endTime: "11:30 AM", description: "Opening Ceremony", location: "Tandon Gym" },
   { startTime: "12:00 PM", endTime: "12:30 PM", description: "Team Formation", location: "Tandon Gym" },
-  { startTime: "12:00 PM", endTime: "3:30 PM", description: "HackNYU 2026 Booth", location: "Room A" },
+  { startTime: "12:00 PM", endTime: "3:00 PM", description: "HackNYU 2026 Booth", location: "Room A" },
   { startTime: "12:30 PM", endTime: "1:30 PM", description: "Workshop", location: "Tandon Gym" },
   { startTime: "2:00 PM", endTime: "3:00 PM", description: "Lunch", location: "MakerSpace Foyer" },
   { startTime: "3:00 PM", endTime: "", description: "Fun-tivity", location: "Tandon Gym" },
