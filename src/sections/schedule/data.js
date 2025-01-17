@@ -233,7 +233,7 @@ export const saturdayMobileScheduleData = [
 ];
 
 export const sundayMobileScheduleData = [
-  { startTime: "11:00 AM", endTime: "12:00 AM", description: "Brunch", location: "MakerSpace Foyer" },
+  { startTime: "11:00 AM", endTime: "12:00 PM", description: "Brunch", location: "MakerSpace Foyer" },
   { startTime: "11:30 AM", endTime: "", description: "Project Deadline!", location: "" },
   { startTime: "12:00 PM", endTime: "2:00 PM", description: "Judging", location: "Tandon Gym" },
   { startTime: "3:00 PM", endTime: "4:00 PM", description: "Closing Ceremony", location: "Pfizer Auditorium" }
