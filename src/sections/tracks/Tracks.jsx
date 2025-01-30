@@ -6,9 +6,9 @@ import InternetIcon from "../../assets/tracks/internet.svg?react";
 
 const tracksData = [
   {
-    title: "FinTech/Quant: Best Financial Hack",
+    title: "FinTech: Best Financial Hack",
     subtitle: "Sponsored by Capital One",
-    description: "Bring the Wall Street in you to create projects revolving around financial stability, NFTs, financial literacy, quant strat, and money, money, money.",
+    description: "Whether it's an innovative payment solution, helping consumers shop smarter, making financing more accessible, or a creative way to improve financial literacy, we want to see your boldest ideas in action.",
     Icon: FintechIcon,
   },
   {
