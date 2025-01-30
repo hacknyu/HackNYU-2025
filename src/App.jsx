@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import Tracks from "./sections/tracks/Tracks";
 import Sponsors from "./sections/sponsors/Sponsors";
 import Schedule from "./sections/schedule/Schedule";
+import MeetTheTeam from "./sections/meettheteam/MeetTheTeam";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Schedule />
       <Sponsors />
       <FAQ />
+      <MeetTheTeam />
       <Footer />
     </div>
   );

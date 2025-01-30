@@ -1,24 +1,127 @@
 import React from "react";
 
-// stand-in data to be replaced
+// 1) Import each image directly:
+import fahimImg from "../../assets/bitmojis/grin smile-Fahim Hussain.png";
+import isaacImg from "../../assets/bitmojis/grin smile - Isaac Zhang.png";
+import kaynaImg from "../../assets/bitmojis/grin smile - Kayna Huang.png";
+import mohanImg from "../../assets/bitmojis/grin smile - Mohan Lu.png";
+import shreyImg from "../../assets/bitmojis/grin smile - Shrey Kharbanda.png";
+import tanzinaImg from "../../assets/bitmojis/grin smile - Tanzina Sumona.png";
+import helenImg from "../../assets/bitmojis/Helen_Zhou_bitmoji - Helen Zhou.png";
+import cassandraImg from "../../assets/bitmojis/IMG_9762 - Cassandra Salazar.png";
+import rileyImg from "../../assets/bitmojis/Riley_Bitmoji - Riley Dou.png";
+import sarthakImg from "../../assets/bitmojis/Sarthak-Goel - Sarthak Goel.png";
+import aaliaImg from "../../assets/bitmojis/smiling - Aalia Imran.png";
+import vandanaImg from "../../assets/bitmojis/smiling - Vandana Rajesh.png";
+import anaImg from "../../assets/bitmojis/sticker - Ana Eremina.png";
+import haileyImg from "../../assets/bitmojis/sticker - Hailey Kim.png";
+import heloiseImg from "../../assets/bitmojis/sticker - Heloise Wu.png";
+import rishiImg from "../../assets/bitmojis/sticker - Rishi Rana.png";
+import zakImg from "../../assets/bitmojis/grin smile - Zakaria Arshad.png";
+
+// 2) Use each imported variable in the teamMembers array:
 const teamMembers = [
   {
+    id: 5,
+    name: "Shrey Kharbanda",
+    title: "Executive Director",
+    image: shreyImg,
+  },
+  {
+    id: 8,
+    name: "Cassandra Salazar",
+    title: "Vice President",
+    image: cassandraImg,
+  },
+  {
+    id: 16,
+    name: "Rishi Rana",
+    title: "Vice President",
+    image: rishiImg,
+  },
+  {
     id: 1,
-    name: "John Doe",
-    title: "Software Engineer",
-    image: "https://via.placeholder.com/150",
+    name: "Fahim Hussain",
+    title: "Tech Development",
+    image: fahimImg,
+  },
+  {
+    id: 4,
+    name: "Mohan Lu",
+    title: "Tech Development",
+    image: mohanImg,
+  },
+  {
+    id: 9,
+    name: "Riley Dou",
+    title: "Tech Development",
+    image: rileyImg,
+  },
+  {
+    id: 10,
+    name: "Sarthak Goel",
+    title: "Tech Development",
+    image: sarthakImg,
+  },
+  {
+    id: 99,
+    name: "Zakaria Arshad",
+    title: "Tech Development",
+    image: zakImg,
+  },
+  {
+    id: 6,
+    name: "Tanzina Sumona",
+    title: "Logistics",
+    image: tanzinaImg,
+  },
+  {
+    id: 11,
+    name: "Aalia Imran",
+    title: "Logistics",
+    image: aaliaImg,
+  },
+  {
+    id: 12,
+    name: "Vandana Rajesh",
+    title: "Design",
+    image: vandanaImg,
+  },
+  {
+    id: 13,
+    name: "Ana Eremina",
+    title: "Design",
+    image: anaImg,
+  },
+  {
+    id: 15,
+    name: "Heloise Wu",
+    title: "Design",
+    image: heloiseImg,
   },
   {
     id: 2,
-    name: "Jane Smith",
-    title: "Product Designer",
-    image: "https://via.placeholder.com/150",
+    name: "Isaac Zhang",
+    title: "Media and Marketing",
+    image: isaacImg,
   },
   {
     id: 3,
-    name: "Sam Wilson",
-    title: "Project Manager",
-    image: "https://via.placeholder.com/150",
+    name: "Kayna Huang",
+    title: "Media and Marketing",
+    image: kaynaImg,
+  },
+  {
+    id: 7,
+    name: "Helen Zhou",
+    title: "Media and Marketing",
+    image: helenImg,
+  },
+  {
+    id: 14,
+    name: "Hailey Kim",
+    title: "Media and Marketing",
+    image: haileyImg,
   },
 ];
 
