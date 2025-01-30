@@ -1,16 +1,24 @@
+import About from "./sections/about/About";
+import FAQ from "./sections/faq/FAQ";
 import Footer from "./components/footer/Footer";
-import MeetTheTeam from "./sections/meettheteam/MeetTheTeam";
+import Hero from "./sections/hero/Hero";
+import Navbar from "./components/navbar/Navbar";
+import Tracks from "./sections/tracks/Tracks";
+import Sponsors from "./sections/sponsors/Sponsors";
+import Schedule from "./sections/schedule/Schedule";
 
 const App = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline font-inter text-blue">
-        Hello world!
-      </h1>
-
-      <MeetTheTeam />
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <About />
+      <Tracks />
+      <Schedule />
+      <Sponsors />
+      <FAQ />
       <Footer />
-    </>
+    </div>
   );
 };
 

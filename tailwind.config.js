@@ -15,7 +15,13 @@ export default {
         },
         orange: {
           DEFAULT: '#F95620',
+        },
+        dark_blue: {
+          DEFAULT: '#25499F',
         }
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite', 
       },
     },
   },

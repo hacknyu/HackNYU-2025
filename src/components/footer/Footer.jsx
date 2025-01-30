@@ -1,7 +1,6 @@
 import React from 'react';
 import ig from '../../assets/iglogo.svg';
 import linkedin from '../../assets/linkedinlogo.svg';
-import './Footer.css';
 
 export default function Footer() {
   return (
