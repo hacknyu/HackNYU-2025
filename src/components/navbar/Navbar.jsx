@@ -96,6 +96,17 @@ const Navbar = () => {
         >
           FAQ
         </Link>
+
+        <Link
+          to="team"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-75}
+          className="hover:cursor-pointer hover:text-dark_blue"
+        >
+          Team
+        </Link>
       </div>
       <div className="relative flex flex-col justify-center items-center w-full h-full md:hidden ">
         <div className="circle"></div>
@@ -168,6 +179,18 @@ const Navbar = () => {
               onClick={handleClick}
             >
               FAQ
+            </Link>
+
+            <Link
+              to="team"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-75}
+              className="hover:cursor-pointer hover:brightness-90"
+              onClick={handleClick}
+            >
+              Team
             </Link>
           </div>
           </>
