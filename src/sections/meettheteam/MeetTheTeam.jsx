@@ -18,6 +18,10 @@ import haileyImg from "../../assets/bitmojis/sticker - Hailey Kim.png";
 import heloiseImg from "../../assets/bitmojis/sticker - Heloise Wu.png";
 import rishiImg from "../../assets/bitmojis/sticker - Rishi Rana.png";
 import zakImg from "../../assets/bitmojis/grin smile - Zakaria Arshad.png";
+import ashleyImg from "../../assets/bitmojis/sticker - Ashley.png";
+import bamImg from "../../assets/bitmojis/sticker - Bam.png";
+import danielImg from "../../assets/bitmojis/sticker - Daniel.png";
+import cherImg from "../../assets/bitmojis/sticker - Cher.png";
 
 // 2) Use each imported variable in the teamMembers array:
 const teamMembers = [
@@ -39,7 +43,12 @@ const teamMembers = [
     title: "Vice President",
     image: cassandraImg,
   },
-  // Bam
+  {
+    id: 19,
+    name: "Bamlak Tekle",
+    title: "Vice President",
+    image: bamImg,
+  },
   {
     id: 13,
     name: "Ana Eremina",
@@ -52,7 +61,12 @@ const teamMembers = [
     title: "Design",
     image: vandanaImg,
   },
-  // Cher
+  {
+    id: 21,
+    name: "Cher Wang",
+    title: "Design",
+    image: cherImg,
+  },
   {
     id: 15,
     name: "Heloise Wu",
@@ -65,14 +79,24 @@ const teamMembers = [
     title: "Logistics PM",
     image: tanzinaImg,
   },
-  // Ashley
+  {
+    id: 18,
+    name: "Ashley Battiste",
+    title: "Logistics",
+    image: ashleyImg,
+  },
   {
     id: 11,
     name: "Aalia Imran",
     title: "Logistics",
     image: aaliaImg,
   },
-  // Daniel
+  {
+    id: 20,
+    name: "Daniel Li", 
+    title: "Logistics",
+    image: danielImg,  
+  },
   {
     id: 3,
     name: "Kayna Huang",
@@ -104,7 +128,7 @@ const teamMembers = [
     image: rileyImg,
   },
   {
-    id: 99,
+    id: 17,
     name: "Zakaria Arshad",
     title: "Tech Development",
     image: zakImg,
