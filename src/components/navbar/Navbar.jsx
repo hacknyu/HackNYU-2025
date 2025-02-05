@@ -17,7 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1024) {
         setIsOpen(false);
       }
     };
@@ -35,13 +35,13 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed flex text-xl items-center overflow-hidden w-full bg-white z-10 ${
-        isOpen ? 'h-full' : 'h-[75px] justify-between'
+        isOpen ? 'h-full' : 'h-[75px] justify-center'
       }`}
     >
-      <div className={`w-[100px] ml-5 ${isOpen ? 'hidden' : 'block'}`}>
+      <div className={`absolute left-5 w-[100px] ${isOpen ? 'hidden' : 'block'}`}>
         <img src="/2025/hacklogo.svg" alt="HackNYU logo"></img>
       </div>
-      <div className="hidden font-bold md:flex md:space-x-10 md:text-blue md:text-2xl">
+      <div className="hidden font-bold lg:flex lg:space-x-10 lg:text-blue lg:text-2xl">
         <Link
           to="about"
           spy={true}
@@ -108,7 +108,7 @@ const Navbar = () => {
           Team
         </Link>
       </div>
-      <div className="relative flex flex-col justify-center items-center w-full h-full md:hidden ">
+      <div className="relative flex flex-col justify-center items-center w-full h-full lg:hidden ">
         <div className="circle"></div>
         {!isOpen ? /* menu */
           <span className="flex flex-col justify-center items-center gap-y-1 absolute top-5 right-2 w-[40px] h-[40px] hover:cursor-pointer" onClick={handleClick}>
@@ -196,17 +196,7 @@ const Navbar = () => {
           </>
         } 
       </div>
-      <div className="md:w-[100px] md:mr-5">
-        <a className="hidden md:block bg-blue text-white py-2 px-4 md:text-xl border-none rounded cursor-pointer transition-colors duration-300 hover:cursor-pointer hover:bg-dark_blue"
-            href="https://forms.gle/eUhikbS4VpcnXTvA9"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-          Register
-        </a>
-      </div>
-
-      <div className={`block max-w-[100px] min-w-[60px] fixed left-[120px] top-0 w-[10%] z-[10000] ${isOpen ? 'hidden' : 'block'}`}>
+      <div className={`fixed max-w-[100px] min-w-[60px] top-0 lg:right-5 right-16 w-[10%] z-11 ${isOpen ? 'hidden' : 'block'}`}>
         <a id="mlh-trust-badge" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" className='w-full'/></a>
       </div>
     </nav>
