@@ -5,29 +5,28 @@ export default function FAQ() {
     {
       question: 'What is HackNYU 2025?',
       answer:
-        // "HackNYU 2025 is a 48-hour world-wide hackathon hosted by a team of NYU students. Come build your dream project, learn about the latest technologies and products from professionals and mentors, and, of course, win prizes! HackNYU is free, and made possible thanks to our wonderful sponsors and volunteers. HackNYU's hackathons are designed to promote inclusion, accessibility, and diversity and is currently open to NYU students and NYC high school students ONLY.",
-        "HackNYU 2025 is a 48-hour hackathon hosted by NYU students. Come build your dream project, learn about the latest technologies and products from professionals and mentors, and, of course, win prizes! HackNYU is free, and made possible thanks to our wonderful sponsors and volunteers.",
+        "HackNYU 2025 is a 48-hour hackathon hosted by NYU students! Come build your dream project, learn about the latest technologies and products from professionals and mentors, and, of course, win prizes! HackNYU is free, and made possible thanks to our wonderful sponsors and volunteers.",
     },
-    // {
-    //   question: 'Who can attend HackNYU 2025',
-    //   answer:
-    //     "NYU students and NYC high school students ONLY. Anyone 18 or older is encouraged to apply. However, we also welcome minors over the age of 16 to apply with a guardian's permission!",
-    // },
     {
       question: 'Where is HackNYU 2025 taking place?',
       answer:
-        "It takes places in Brooklyn Athletic Facility gym at NYU Tandon! You will get more details upon acceptance.",
+        "It takes places at NYU Tandon! You will get more details upon acceptance.",
     },
     {
       question: 'Do I need a team to sign up?',
       answer:
         'No, we will have a team forming opportunity during the hackathon as well as other ways to form teams beforehand once you are accepted!',
     },
-    // {
-    //   question: 'What is the deadline to apply to HackNYU 2025?',
-    //   answer:
-    //     'The deadline to apply is ____ for NYC high school students.',
-    // },
+    {
+      question: 'Will there be reimbursements for travel?',
+      answer:
+        'Unfortunately, we will not be able to provide reimbursements for travel this year.',
+    },
+    {
+      question: 'What is the deadline to apply to HackNYU 2025?',
+      answer:
+        'The deadline to apply is January 30th.',
+    },
     {
       question: 'Do I need prior experience?',
       answer:
@@ -48,7 +47,7 @@ export default function FAQ() {
       answer:
         'Teams should be 4 people max. While you can hack by yourself, we discourage it in the spirit of the hackathon!',
     },
-   ];
+  ];
 
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -60,7 +59,6 @@ export default function FAQ() {
     <section id="faq" className="bg-blue md:rounded-t-[100px] min-h-0 flex flex-col items-center text-white px-8 py-8 md:py-20">
       <div className="flex flex-col justify-between w-full md:bg-transparent md:items-center md:min-h-0">
         <h1 className="text-[32px] font-bold">Frequently Asked Questions</h1>
-        {/* <p className="mt-auto text-sm md:hidden">hack.support@nyu.edu</p> */}
       </div>
 
       {/* this will merge into one column on mobile */}
