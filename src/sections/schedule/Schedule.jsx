@@ -330,7 +330,7 @@ const Schedule = () => {
                   )
                 }
               }
-              if (index >= 17 && index <= 23) {
+              if (index >= 17 && index <= 18) {
                 if (index === 17) {
                   return (
                     <tr key={index} className="h-[50px]">
@@ -352,7 +352,7 @@ const Schedule = () => {
                   )
                 }
               }
-              if (index >= 22 && index <= 26) {
+              if (index >= 22 && index <= 24) {
                 if (index === 22) {
                   return (
                     <tr key={index} className="h-[50px]">
@@ -364,7 +364,7 @@ const Schedule = () => {
                       {renderTableCell(row.tandonGym)}
                       <td
                         className="p-2 border border-blue border-opacity-50 rounded-3xl bg-white text-blue"
-                        rowSpan={4}
+                        rowSpan={3}
                       >
                         <div className="text-s font-bold text-center">Dinner</div>
                       </td>
