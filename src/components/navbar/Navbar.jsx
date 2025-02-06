@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { baseURL } from '../../constants.js';
+import hacklogo from '../../assets/hacklogo.svg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +40,7 @@ const Navbar = () => {
       }`}
     >
       <div className={`absolute left-5 w-[100px] ${isOpen ? 'hidden' : 'block'}`}>
-        <img src={`${baseURL}/hacklogo.svg`} alt="HackNYU logo"></img>
+        <img src={hacklogo} alt="HackNYU logo"></img>
       </div>
       <div className="hidden font-bold lg:flex lg:space-x-10 lg:text-blue lg:text-2xl">
         <Link
