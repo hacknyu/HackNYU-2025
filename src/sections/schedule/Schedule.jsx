@@ -95,22 +95,22 @@ const Schedule = () => {
               <th className="w-1/5"></th>
               <th className={thStyle}>
                 <a 
-                  href={locationLinks['Tandon Gym']} 
+                  href={locationLinks['NYU Tandon Gym']} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:underline cursor-pointer"
                 >
-                  Tandon Gym
+                  NYU Tandon Gym
                 </a>
               </th>
-              <th className={thStyle}>Room A</th>
-              <th className={thStyle}>Room B</th>
               <th className={thStyle}>MakerSpace Foyer</th>
+              <th className={thStyle}>Maker EventSpace</th>
+              <th className={thStyle}>RH201</th>
             </tr>
           </thead>
           <tbody>
             {saturdayScheduleWeb.map((row, index) => {
-              if (index >= 0 && index <= 2) {
+              if (index >= 0 && index <= 3) {
                 if (index === 0){
                   return (
                     <tr key={index} className="h-[50px]">
@@ -124,16 +124,51 @@ const Schedule = () => {
                         </td>
                       )}
                       
-                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={3}>
                         <div className="text-s font-bold text-center">
                           Check-In
+                        </div>
+                      </td>
+                      {renderTableCell(row.makerspace)}
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={3}>
+                        <div className="text-s font-bold text-center">
+                          Breakfast
                         </div>
                       </td>
                   </tr>
                 );
               }
               }
-              if (index >= 6 && index <= 8) {
+              if (index >= 3 && index <= 5) {
+                if (index === 3) {
+                  return (
+                    <tr key={index} className="h-[50px]">
+                      {row.time === '●' ? (
+                        <td className="text-blue p-2 text-s font-bold text-center">
+                          ●
+                        </td>
+                      ) : (
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold text-center ">
+                          {row.time}
+                        </td>
+                      )}
+                      
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold text-center">
+                          Opening Ceremony
+                        </div>
+                      </td>
+                      <td className=""> </td>
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold text-center">
+                          Late Check-In
+                        </div>
+                      </td>
+                  </tr>
+                );
+                }
+              }
+              if (index >= 6 && index <= 11) {
                 if (index === 6){
                   return (
                     <tr key={index} className="h-[50px]">
@@ -147,17 +182,17 @@ const Schedule = () => {
                         </td>
                       )}
                       
-                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={6}>
                         <div className="text-s font-bold text-center">
-                          Workshop
+                          Sponsor Fair
                         </div>
                       </td>
                   </tr>
                   );
                 }
               }
-              if (index >= 12 && index <= 16) {
-                if (index === 13){
+              if (index >= 7 && index <= 11) {
+                if (index === 7){
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
@@ -170,22 +205,51 @@ const Schedule = () => {
                         </td>
                       )}
                       
-                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={3}>
-                        <div className="text-s font-bold text-center">
-                          Surprise De-stressing Event
-                        </div>
-                      </td>
                       <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
                         <div className="text-s font-bold text-center">
-                          Workshop
+                          Lunch
                         </div>
                       </td>
                   </tr>
                   );
                 }
               }
-              if (index >= 5 && index <= 10) {
-                if (index === 5) {
+              if (index >= 15 && index <= 16) {
+                if (index === 15){
+                  return (
+                    <tr key={index} className="h-[50px]">
+                      {row.time === '●' ? (
+                        <td className="text-blue p-2 text-s font-bold text-center">
+                          ●
+                        </td>
+                      ) : (
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold text-center ">
+                          {row.time}
+                        </td>
+                      )}
+                      
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold text-center">
+                          Big Nerds Time!
+                        </div>
+                      </td>
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={3}>
+                        <div className="text-s font-bold text-center">
+                          Snacks
+                        </div>
+                      </td>
+                      {renderTableCell(row.tandonGym)}
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold text-center">
+                        GitHub Copilot Workshop
+                        </div>
+                      </td>
+                  </tr>
+                  );
+                }
+              }
+              if (index >= 11 && index <= 15) {
+                if (index === 11) {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
@@ -199,39 +263,23 @@ const Schedule = () => {
                       )}
                       {renderTableCell(row.tandonGym)}
                       <td 
-                        className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={6}>
+                        className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
                         <div className="text-s font-bold text-center">
-                          HackNYU 2026 Booth
+                          Destress with HackNYU!
+                        </div>
+                      </td>
+                      <td 
+                        className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold text-center">
+                          Google Workshop
                         </div>
                       </td>
                     </tr>
                   );
                 } 
-                if (index === 9){
-                  return (
-                    <tr key={index} className="h-[50px]">
-                      {row.time === '●' ? (
-                        <td className="text-blue p-2 text-s font-bold text-center">
-                          ●
-                        </td>
-                      ) : (
-                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold text-center ">
-                          {row.time}
-                        </td>
-                      )}
-                      {renderTableCell(row.tandonGym)}
-                      {renderTableCell(row.roomA)}
-                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
-                        <div className="text-s font-bold text-center">
-                          Lunch
-                        </div>
-                      </td>
-                    </tr>
-                  )
-                }
               }
-              if (index >= 12 && index <= 14) {
-                if (index === 12){
+              if (index >= 7 && index <= 14) {
+                if (index === 7){
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
@@ -253,8 +301,8 @@ const Schedule = () => {
                   );
                 }
               }
-              if (index >= 21 && index <= 23) {
-                if (index === 21){
+              if (index >= 13 && index <= 15) {
+                if (index === 13) {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
@@ -267,21 +315,45 @@ const Schedule = () => {
                         </td>
                       )}
                       {renderTableCell(row.tandonGym)}
-                      {renderTableCell(row.roomA)}
-                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                      {renderTableCell(row.tandonGym)}
+                      {renderTableCell(row.MakerSpace_Foyer)}
+                      <td 
+                        className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
                         <div className="text-s font-bold text-center">
-                          Rest Hour<br />
-                          <span className="text-s">(to 7:30AM next day)</span>
+                          Figma Workshop
                         </div>
                       </td>
-                    {renderTableCell(row.roomB)}
+                    </tr>
+                  );
+                } 
+              }
+              if (index >= 17 && index <= 23) {
+                if (index === 17){
+                  return (
+                    <tr key={index} className="h-[50px]">
+                      {row.time === '●' ? (
+                        <td className="text-blue p-2 text-s font-bold text-center">
+                          ●
+                        </td>
+                      ) : (
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold text-center ">
+                          {row.time}
+                        </td>
+                      )}
+                      {renderTableCell(row.tandonGym)}
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
+                        <div className="text-s font-bold text-center">
+                          FUN-TIVITY (WIN $$$)
+                        </div>
+                      </td>
+                    {renderTableCell(row.Maker_EventSpace)}
                     {renderTableCell(row.makerspace)}
                   </tr>
                   );
                 }
               }
-              if (index >= 1 && index <= 3) {
-                if (index === 1){
+              if (index >= 22 && index <= 26) {
+                if (index === 22){
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
@@ -294,33 +366,7 @@ const Schedule = () => {
                         </td>
                       )}
                       {renderTableCell(row.tandonGym)}
-                      {renderTableCell(row.roomA)}
-                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
-                        <div className="text-s font-bold text-center">
-                          Breakfast
-                        </div>
-                      </td>
-                  </tr>
-                  );
-                }
-              }
-              if (index >= 20 && index <= 23) {
-                if (index === 20){
-                  return (
-                    <tr key={index} className="h-[50px]">
-                      {row.time === '●' ? (
-                        <td className="text-blue p-2 text-s font-bold text-center">
-                          ●
-                        </td>
-                      ) : (
-                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold text-center ">
-                          {row.time}
-                        </td>
-                      )}
-                      {renderTableCell(row.tandonGym)}
-                      {renderTableCell(row.roomA)}
-                      {renderTableCell(row.roomB)}
-                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={3}>
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={4}>
                         <div className="text-s font-bold text-center">
                           Dinner
                         </div>
@@ -341,8 +387,8 @@ const Schedule = () => {
                     </td>
                   )}
                   {renderTableCell(row.tandonGym)}
-                  {renderTableCell(row.roomA)}
-                  {renderTableCell(row.roomB)}
+                  {renderTableCell(row.MakerSpace_Foyer)}
+                  {renderTableCell(row.Maker_EventSpace)}
                   {renderTableCell(row.makerspace)}
                 </tr>
               );
@@ -382,13 +428,35 @@ const Schedule = () => {
                   </a>
                 </th>
               ))}
-              <th className={thStyle}>MakerSpace Foyer</th>
             </tr>
           </thead>
           <tbody>
             {sundayScheduleWeb.map((row, index) => {
-              if (index >= 2 && index <= 5) {
-                if (index === 2){
+              if (index >= 0 && index <= 10) {
+                if (index === 0){
+                  return (
+                    <tr key={index} className="h-[50px]">
+                      {row.time === '●' ? (
+                        <td className="text-blue p-2 text-s font-bold text-center">
+                          ●
+                        </td>
+                      ) : (
+                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold text-center ">
+                          {row.time}
+                        </td>
+                      )}
+                      {renderTableCell(row.tandonGym)}
+                      <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={3}>
+                        <div className="text-s font-bold text-center">
+                          Brunch
+                        </div>
+                      </td>
+                  </tr>
+                  );
+                }
+              }
+              if (index >= 5 && index <= 10) {
+                if (index === 5){
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === '●' ? (
@@ -409,31 +477,14 @@ const Schedule = () => {
                   );
                 }
               }
-              if (index >= 11 && index <= 13) {
-                if (index === 11){
-                  return (
-                    <tr key={index} className="h-[50px]">
-                      {row.time === '●' ? (
-                        <td className="text-blue p-2 text-s font-bold text-center">
-                          ●
-                        </td>
-                      ) : (
-                        <td className="bg-blue text-white p-2 rounded-xl text-s font-bold text-center ">
-                          {row.time}
-                        </td>
-                      )}
-                      {renderTableCell(row.tandonGym)}
-                  </tr>
-                  );
-                }
-              }
-              if (index >= 9 && index <= 10) {
-                if (index === 9){
+              if (index >= 10 && index <= 13) {
+                if (index === 10){
                   return (
                     <tr key={index} className="h-[50px]">
                       <td className="bg-blue text-white p-2 rounded-xl text-s font-bold text-center ">
                         {row.time}
                       </td>
+                      {renderTableCell(row.tandonGym)}
                       {renderTableCell(row.tandonGym)}
                       <td className="p-2 border border-blue border-opacity-50 rounded-xl bg-white text-blue" rowSpan={2}>
                         <div className="text-s font-bold text-center">
