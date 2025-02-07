@@ -16,6 +16,8 @@ import defi from "../../assets/sponsors/defi.png";
 import happenings from "../../assets/sponsors/happenings.png";
 import registrar from "../../assets/sponsors/registrar.jpg";
 import tandon from "../../assets/sponsors/tandon.png";
+import solana from "../../assets/sponsors/solana.png";
+import nyTherapyAnimals from "../../assets/sponsors/nyTherapyAnimals.png"
 
 const entries = [
   [
@@ -30,6 +32,15 @@ const entries = [
       name: "Capital One",
       src: capitalOne,
       rank: 2,
+      link: "https://www.capitalone.com/",
+    },
+  ],
+  [
+    {
+      name: "Solana",
+      src: solana,
+      rank: 2,
+      link: "https://solana.com/",
     },
   ],
   [
@@ -127,6 +138,12 @@ const entries = [
       src: standOutStickers,
       rank: 6,
       link: "http://hackp.ac/mlh-StandOutStickers-hackathons"
+    },
+    {
+      name: "NY Therapy Animals",
+      src: nyTherapyAnimals,
+      rank: 6,
+      link: "https://newyorktherapyanimals.org/",
     },
   ]
 ];
