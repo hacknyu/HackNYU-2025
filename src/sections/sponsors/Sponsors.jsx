@@ -96,6 +96,7 @@ const entries = [
       name: "Happenings",
       src: happenings,
       rank: 3,
+      link: "https://happenings.dev/",
     }
   ],
   [
