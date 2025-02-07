@@ -10,6 +10,12 @@ import nyu from "../../assets/sponsors/nyu.png";
 import campusSafety from "../../assets/sponsors/campusSafety.png";
 import wasserman from "../../assets/sponsors/wasserman.png";
 import standOutStickers from "../../assets/sponsors/standOutStickers.png";
+import bigNerds from "../../assets/sponsors/bignerds.jpg";
+import cocojune from "../../assets/sponsors/cocojune.png";
+import defi from "../../assets/sponsors/defi.png";
+import happenings from "../../assets/sponsors/happenings.png";
+import registrar from "../../assets/sponsors/registrar.jpg";
+import tandon from "../../assets/sponsors/tandon.png";
 
 const entries = [
   [
@@ -56,6 +62,33 @@ const entries = [
   ],
   [
     {
+      name: "BigNerds",
+      src: bigNerds,
+      rank: 3,
+      link: "https://bignerdscorp.com/",
+    },
+    {
+      name: "Cocojune",
+      src: cocojune,
+      rank: 3,
+      link: "https://www.cocojune.co/",
+    },
+  ],
+  [
+    {
+      name: "Defi",
+      src: defi,
+      rank: 3,
+      link: "https://www.defi-snacks.com/",
+    },
+    {
+      name: "Happenings",
+      src: happenings,
+      rank: 3,
+    }
+  ],
+  [
+    {
       name: "NYU IT",
       src: it,
       rank: 5,
@@ -78,12 +111,24 @@ const entries = [
       rank: 6,
     },
     {
+      name: "NYU Tandon",
+      src: tandon,
+      rank: 6,
+    },
+    {
+      name: "NYU Office of the Registrar",
+      src: registrar,
+      rank: 6,
+    },
+  ],
+  [
+    {
       name: "StandOut Stickers",
       src: standOutStickers,
       rank: 6,
       link: "http://hackp.ac/mlh-StandOutStickers-hackathons"
     },
-  ],
+  ]
 ];
 
 const Sponsor = ({ name, src, rank, link }) => {
