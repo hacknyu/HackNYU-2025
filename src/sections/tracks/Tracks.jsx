@@ -13,6 +13,7 @@ const tracksData = [
   },
   {
     title: "Interactive Media Arts: Mixed Reality (AR/VR)",
+    subtitle: "Sponsored by Google",
     description:
       "Craft dynamic user experiences with augmented and virtual reality technologies, combining artistry with technical expertise.",
     Icon: InternetIcon,
