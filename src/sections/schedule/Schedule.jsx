@@ -520,8 +520,8 @@ const Schedule = () => {
                   )
                 }
               }
-              if (index >= 5 && index <= 10) {
-                if (index === 5) {
+              if (index >= 4 && index <= 9) {
+                if (index === 4) {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === "●" ? (
@@ -539,8 +539,23 @@ const Schedule = () => {
                   )
                 }
               }
-              if (index >= 10 && index <= 13) {
-                if (index === 10) {
+              if (index == 8) {
+                return (
+                  <tr key={index} className="h-[50px]">
+                    <td className="bg-blue text-white p-2 rounded-3xl text-s font-bold text-center ">{row.time}</td>
+                    {renderTableCell(row.tandonGym)}
+                    {renderTableCell(row.tandonGym)}
+                    <td
+                      className="p-2 border border-blue border-opacity-50 rounded-3xl bg-white text-blue"
+                      rowSpan={1}
+                    >
+                      <div className="text-s font-bold text-center">A Day in the Life Panel</div>
+                    </td>
+                  </tr>
+                )
+              }
+              if (index >= 9 && index <= 13) {
+                if (index === 9) {
                   return (
                     <tr key={index} className="h-[50px]">
                       <td className="bg-blue text-white p-2 rounded-3xl text-s font-bold text-center ">{row.time}</td>
