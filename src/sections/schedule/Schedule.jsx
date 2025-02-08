@@ -60,9 +60,40 @@ const Schedule = () => {
                       >
                         {section.location}
                       </a>
+                      {section.locationAlt? 
+                        <span>{", "}
+                          <a
+                            href={locationLinks[section.locationAlt]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline cursor-pointer"
+                          >
+                            {section.locationAlt}
+                          </a>
+                        </span>
+                       : (<span/>)}
                     </span>
                   ) : (
                     <span className="text-sm">{section.location}</span>
+                  )}
+
+                  {/* Combined events with same time and different locations (add some margin between events in same slot) */}
+                  {section.location2 ? <span className="mt-4" />: <span/>}
+                  <span className="text-xl font-bold">{section.description2}</span>
+                  {Object.hasOwn(locationLinks, section.location2) ? (
+                    <span className="text-sm">
+                      <a
+                        href={locationLinks[section.location2]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline cursor-pointer"
+                      >
+                        {section.location2}
+                      </a>
+                    </span>
+                  ) : (
+                    <span></span>
+                    // <span className="text-sm">{section.location2}</span>
                   )}
                 </div>
               </div>
@@ -85,7 +116,7 @@ const Schedule = () => {
       }}
     >
       <div className="hidden sm:block max-w-6xl mx-auto mb-8">
-        <h2 className="text-blue text-[32px] md:text-4xl font-bold text-center mb-8 mt-12">Saturday Schedule</h2>
+        <h2 className="text-blue text-[32px] font-bold text-center mb-8 mt-12">Saturday Schedule</h2>
 
         <table className="w-full border-separate border-spacing-3 table-fixed">
           <thead>
@@ -151,7 +182,6 @@ const Schedule = () => {
                       >
                         <div className="text-s font-bold text-center">Check-In</div>
                       </td>
-                      {renderTableCell(row.makerspace)}
                       <td
                         className="p-2 border border-blue border-opacity-50 rounded-3xl bg-white text-blue"
                         rowSpan={3}
@@ -377,7 +407,6 @@ const Schedule = () => {
                         <div className="text-s font-bold text-center">FUN-TIVITY (WIN $$$)</div>
                       </td>
                       {renderTableCell(row.Maker_EventSpace)}
-                      {renderTableCell(row.makerspace)}
                     </tr>
                   )
                 }
@@ -412,7 +441,6 @@ const Schedule = () => {
                   {renderTableCell(row.tandonGym)}
                   {renderTableCell(row.MakerSpace_Foyer)}
                   {renderTableCell(row.Maker_EventSpace)}
-                  {renderTableCell(row.makerspace)}
                 </tr>
               )
             })}
@@ -427,7 +455,8 @@ const Schedule = () => {
             className="hover:underline"
           >
              RH202
-          </a>, 
+          </a>
+          <span>, </span>
           <a 
             href="https://engineering.nyu.edu/classrooms-event-spaces/rh-204" 
             target="_blank" 
@@ -458,7 +487,9 @@ const Schedule = () => {
           <thead>
             <tr>
               <th className="w-1/5"></th>
-              {Object.entries(locationLinks).map(([location, link], index) => (
+              {Object.entries(locationLinks).filter(([location, _]) => (
+                location === "NYU Tandon Gym" || location === "MakerSpace Foyer" || location === "Pfizer Auditorium"
+              )).map(([location, link], index) => (
                 <th key={index} className={thStyle}>
                   <a href={link} target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">
                     {location}
@@ -534,7 +565,6 @@ const Schedule = () => {
                   )}
                   {renderTableCell(row.tandonGym)}
                   {renderTableCell(row.pfizer)}
-                  {renderTableCell(row.makerspace)}
                 </tr>
               )
             })}
@@ -546,4 +576,3 @@ const Schedule = () => {
 }
 
 export default Schedule
-
