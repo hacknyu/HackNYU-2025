@@ -190,11 +190,6 @@ export const sundayScheduleWeb = [
   {
     time: "2:00 PM - 2:30 PM",
     tandonGym: "",
-    pfizer: "",
-  },
-  {
-    time: "2:30 PM - 3:00 PM",
-    tandonGym: "",
     pfizer: "A Day in the Life Panel",
   },
   {
@@ -321,8 +316,8 @@ export const sundayMobileScheduleData = [
     location: "NYU Tandon Gym",
   },
   {
-    startTime: "2:30 PM",
-    endTime: "3:00 PM",
+    startTime: "2:00 PM",
+    endTime: "2:30 PM",
     description: "A Day in the Life Panel",
     location: "Pfizer Auditorium",
   },
