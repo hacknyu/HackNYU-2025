@@ -520,8 +520,8 @@ const Schedule = () => {
                   )
                 }
               }
-              if (index >= 5 && index <= 10) {
-                if (index === 5) {
+              if (index >= 4 && index <= 9) {
+                if (index === 4) {
                   return (
                     <tr key={index} className="h-[50px]">
                       {row.time === "●" ? (
