@@ -9,7 +9,7 @@ const Hero = () => {
           NYU Tandon School of Engineering
         </p>
         <p className="inline-block bg-orange font-bold text-white py-2 px-4 md:text-xl border-none rounded transition-colors duration-300 mb-8">
-          Event Over!
+          Event Over :(
         </p>
       </div>
       <div className="flex flex-col justify-center text-6xl sm:text-7xl lg:text-8xl text-white font-bold w-3/4 sm:w-[400px] h-[500px] mx-auto mt-10 lg:mt-20 md:pr-8">
